@@ -17,35 +17,35 @@
 <tr><td colspan="5"><strong>Ugens overordnede emner:</strong> Spring Boot intro</td></tr>
 <tr>
   <td>05</td>
-  <td><a href="05/01_man_2026-01-26/README.md">Mandag 26-01-2026</a></td>
+  <td><a href="35/01_man_2026-08-24/README.md">Mandag 26-01-2026</a></td>
   <td>Introduktion til semester og Spring Boot</td>
   <td>ANIZ</td>
   <td></td>
 </tr>
 <tr>
   <td></td>
-  <td><a href="05/02_tir_2026-01-27/README.md">Tirsdag 27-01-2026</a></td>
+  <td><a href="35/01_man_2026-08-25/README.md">Tirsdag 27-01-2026</a></td>
   <td>Spring Boot, Turistguide 1</td>
   <td>TOG</td>
   <td></td>
 </tr>
 <tr>
   <td></td>
-  <td><a href="05/03_ons_2026-01-28/README.md">Onsdag 28-01-2026</a></td>
+  <td><a href="35/01_man_2026-08-26/README.md">Onsdag 28-01-2026</a></td>
   <td>Check-in/vejledning på Turistguide 1</td>
   <td>ANIZ</td>
   <td>Online</td>
 </tr>
 <tr>
   <td></td>
-  <td><a href="05/04_tor_2026-01-29/README.md">Torsdag 29-01-2026</a></td>
+  <td><a href="35/01_man_2026-08-27/README.md">Torsdag 29-01-2026</a></td>
   <td>ITF:</td>
   <td></td>
   <td></td>
 </tr>
 <tr>
   <td></td>
-  <td><a href="05/05_fre_2026-01-30/README.md">Fredag 30-01-2026</a></td>
+  <td><a href="35/01_man_2026-08-28/README.md">Fredag 30-01-2026</a></td>
   <td>Spring Boot arkitektur + opgaver/konsolidering af Spring Boot</td>
   <td>JART</td>
   <td></td>
@@ -55,35 +55,35 @@
 <tr><td colspan="5"><strong>Ugens overordnede emner:</strong> HTML/CSS</td></tr>
 <tr>
   <td>06</td>
-  <td><a href="06/01_man_2026-02-02/README.md">Mandag 02-02-2026</a></td>
+  <td><a href="36/01_man_2026-02-02/README.md">Mandag 02-02-2026</a></td>
   <td>HTML &amp; CSS</td>
   <td>MANY</td>
   <td></td>
 </tr>
 <tr>
   <td></td>
-  <td><a href="06/02_tir_2026-02-03/README.md">Tirsdag 03-02-2026</a></td>
+  <td><a href="36/02_tir_2026-02-03/README.md">Tirsdag 03-02-2026</a></td>
   <td>Java Collections, Map</td>
   <td>IANB</td>
   <td></td>
 </tr>
 <tr>
   <td></td>
-  <td><a href="06/03_ons_2026-02-04/README.md">Onsdag 04-02-2026</a></td>
+  <td><a href="36/03_ons_2026-02-04/README.md">Onsdag 04-02-2026</a></td>
   <td>Check-in/vejledning på Turistguide 1</td>
   <td>IANB/MANY</td>
   <td>Online</td>
 </tr>
 <tr>
   <td></td>
-  <td><a href="06/04_tor_2026-02-05/README.md">Torsdag 05-02-2026</a></td>
+  <td><a href="36/04_tor_2026-02-05/README.md">Torsdag 05-02-2026</a></td>
   <td>ITF:</td>
   <td></td>
   <td></td>
 </tr>
 <tr>
   <td></td>
-  <td><a href="06/05_fre_2026-02-06/README.md">Fredag 06-02-2026</a></td>
+  <td><a href="36/05_fre_2026-02-06/README.md">Fredag 06-02-2026</a></td>
   <td>Feedback Turistguide 1</td>
   <td>SIEB</td>
   <td></td>
@@ -94,35 +94,35 @@
 <tr><td colspan="5"><strong>Ugens overordnede emner:</strong> Spring Boot arkitektur, Thymeleaf</td></tr>
 <tr>
   <td>07</td>
-  <td><a href="07/01_man_2026-02-09/README.md">Mandag 09-02-2026</a></td>
+  <td><a href="37/01_man_2026-02-09/README.md">Mandag 09-02-2026</a></td>
   <td>Introduktion til ThymeLeaf</td>
   <td>SIEB</td>
   <td></td>
 </tr>
 <tr>
   <td></td>
-  <td><a href="07/02_tir_2026-02-10/README.md">Tirsdag 10-02-2026</a></td>
+  <td><a href="37/02_tir_2026-02-10/README.md">Tirsdag 10-02-2026</a></td>
   <td>ThymeLeaf, HTML forms &amp; Thymeleaf, Turistguide 2</td>
   <td>SIEB</td>
   <td></td>
 </tr>
 <tr>
   <td></td>
-  <td><a href="07/03_ons_2026-02-11/README.md">Onsdag 11-02-2026</a></td>
+  <td><a href="37/03_ons_2026-02-11/README.md">Onsdag 11-02-2026</a></td>
   <td>Check-in/vejledning på Turistguide 2</td>
   <td>IANB/MANY</td>
   <td>Online</td>
 </tr>
 <tr>
   <td></td>
-  <td><a href="07/04_tor_2026-02-12/README.md">Torsdag 12-02-2026</a></td>
+  <td><a href="37/04_tor_2026-02-12/README.md">Torsdag 12-02-2026</a></td>
   <td>ITF:</td>
   <td></td>
   <td></td>
 </tr>
 <tr>
   <td></td>
-  <td><a href="07/05_fre_2026-02-13/README.md">Fredag 13-02-2026</a></td>
+  <td><a href="37/05_fre_2026-02-13/README.md">Fredag 13-02-2026</a></td>
   <td>MockMVC og test af Controller</td>
   <td>IANB</td>
   <td></td>
