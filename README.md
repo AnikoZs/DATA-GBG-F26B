@@ -101,28 +101,28 @@
 </tr>
 <tr>
   <td></td>
-  <td><a href="37/01_man_2026-09-08/README.md">Tirsdag 08-09-2026</a></td>
+  <td><a href="37/02_tir_2026-09-08/README.md">Tirsdag 08-09-2026</a></td>
   <td>ThymeLeaf, HTML forms &amp; Thymeleaf, Turistguide 2</td>
   <td>TOG</td>
   <td></td>
 </tr>
 <tr>
   <td></td>
-  <td><a href="37/01_man_2026-09-09/README.md">Onsdag 09-09-2026</a></td>
+  <td><a href="37/03_ons_2026-09-09/README.md">Onsdag 09-09-2026</a></td>
   <td>Check-in/vejledning på Turistguide 2</td>
   <td>ANIZ</td>
   <td>Online</td>
 </tr>
 <tr>
   <td></td>
-  <td><a href="37/01_man_2026-09-10/README.md">Torsdag 10-09-2026</a></td>
+  <td><a href="37/04_tor_2026-09-10/README.md">Torsdag 10-09-2026</a></td>
   <td>ITF:</td>
   <td>DE</td>
   <td></td>
 </tr>
 <tr>
   <td></td>
-  <td><a href="37/01_man_2026-09-11/README.md">Fredag 11-09-2026</a></td>
+  <td><a href="37/05_fre_2026-09-11/README.md">Fredag 11-09-2026</a></td>
   <td>MockMVC og test af Controller</td>
   <td>JART</td>
   <td></td>
