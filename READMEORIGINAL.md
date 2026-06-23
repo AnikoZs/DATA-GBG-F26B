@@ -24,21 +24,21 @@
 </tr>
 <tr>
   <td></td>
-  <td><a href="35/02_tir_2026-08-25/README.md">Tirsdag 27-01-2026</a></td>
+  <td><a href="35/Onsdag%2026-08-2026/README.md">Tirsdag 27-01-2026</a></td>
   <td>Spring Boot, Turistguide 1</td>
   <td>TOG</td>
   <td></td>
 </tr>
 <tr>
   <td></td>
-  <td><a href="35/03_ons_2026-08-26/README.md">Onsdag 28-01-2026</a></td>
+  <td><a href="35/04_tor_2026-08-27/README.md">Onsdag 28-01-2026</a></td>
   <td>Check-in/vejledning på Turistguide 1</td>
   <td>ANIZ</td>
   <td>Online</td>
 </tr>
 <tr>
   <td></td>
-  <td><a href="35/04_tor_2026-08-27/README.md">Torsdag 29-01-2026</a></td>
+  <td><a href="35/02_tir_2026-08-25/README.md">Torsdag 29-01-2026</a></td>
   <td>ITF:</td>
   <td></td>
   <td></td>
@@ -62,7 +62,7 @@
 </tr>
 <tr>
   <td></td>
-  <td><a href="36/02_man_2026-09-01/README.md">Tirsdag 03-02-2026</a></td>
+  <td><a href="36/04_tor_2026-09-03/README.md">Tirsdag 03-02-2026</a></td>
   <td>Java Collections, Map</td>
   <td>IANB</td>
   <td></td>
@@ -76,7 +76,7 @@
 </tr>
 <tr>
   <td></td>
-  <td><a href="36/04_tor_2026-09-03/README.md">Torsdag 05-02-2026</a></td>
+  <td><a href="36/02_tir_2026-09-01/README.md">Torsdag 05-02-2026</a></td>
   <td>ITF:</td>
   <td></td>
   <td></td>
@@ -101,7 +101,7 @@
 </tr>
 <tr>
   <td></td>
-  <td><a href="37/02_tir_2026-09-08/README.md">Tirsdag 10-02-2026</a></td>
+  <td><a href="37/04_tor_2026-09-10/README.md">Tirsdag 10-02-2026</a></td>
   <td>ThymeLeaf, HTML forms &amp; Thymeleaf, Turistguide 2</td>
   <td>SIEB</td>
   <td></td>
@@ -115,7 +115,7 @@
 </tr>
 <tr>
   <td></td>
-  <td><a href="37/04_tor_2026-09-10/README.md">Torsdag 12-02-2026</a></td>
+  <td><a href="37/02_tir_2026-09-08/README.md">Torsdag 12-02-2026</a></td>
   <td>ITF:</td>
   <td></td>
   <td></td>
@@ -139,7 +139,7 @@
 </tr>
 <tr>
   <td></td>
-  <td><a href="38/02_tir_2026-09-15/README.md">Tirsdag 17-02-2026</a></td>
+  <td><a href="38/04_tor_2026-09-17/README.md">Tirsdag 17-02-2026</a></td>
   <td>Kode review med pull requests</td>
   <td>SIEB</td>
   <td></td>
@@ -153,7 +153,7 @@
 </tr>
 <tr>
   <td></td>
-  <td><a href="38/04_tor_2026-09-17/README.md">Torsdag 19-02-2026</a></td>
+  <td><a href="38/02_tir_2026-09-15/README.md">Torsdag 19-02-2026</a></td>
   <td>ITF:</td>
   <td></td>
   <td></td>
@@ -177,21 +177,21 @@
 </tr>
 <tr>
   <td></td>
-  <td><a href="39/02_tir_2026-09-22/README.md">Tirsdag 24-02-2026</a></td>
+  <td><a href="39/03_ons_2026-09-23/README.md">Tirsdag 24-02-2026</a></td>
   <td>GitHub Actions 2</td>
   <td>MANY</td>
   <td></td>
 </tr>
 <tr>
   <td></td>
-  <td><a href="39/03_ons_2026-09-23/README.md">Onsdag 25-02-2026</a></td>
+  <td><a href="39/04_tor_2026-09-24/README.md">Onsdag 25-02-2026</a></td>
   <td>Check-in/vejledning på Turistguide 2</td>
   <td>SIEB/MANY</td>
   <td>Online</td>
 </tr>
 <tr>
   <td></td>
-  <td><a href="39/04_tor_2026-09-24/README.md">Torsdag 26-02-2026</a></td>
+  <td><a href="39/02_tir_2026-09-22/README.md">Torsdag 26-02-2026</a></td>
   <td>ITF:</td>
   <td></td>
   <td></td>
@@ -216,14 +216,14 @@
 </tr>
 <tr>
   <td></td>
-  <td><a href="40/02_tir_2026-09-29/README.md">Tirsdag 03-03-2026</a></td>
+  <td><a href="40/03_ons_2026-09-30/README.md">Tirsdag 03-03-2026</a></td>
   <td>Introduktion til SQL og DDL</td>
   <td>SIEB</td>
   <td>(AFLYST)</td>
 </tr>
 <tr>
   <td></td>
-  <td><a href="40/03_ons_2026-09-30/README.md">Onsdag 04-03-2026</a></td>
+  <td><a href="40/04_tor_2026-10-01/README.md">Onsdag 04-03-2026</a></td>
   <td>SQL</td>
   <td>MANY</td>
   <td>Online</td>
@@ -268,14 +268,14 @@
 </tr>
 <tr>
   <td></td>
-  <td><a href="42/01_man_2026-10-12/README.md">Torsdag 12-03-2026</a></td>
+  <td><a href="43/01_man_2026-10-12/README.md">Torsdag 12-03-2026</a></td>
   <td>Database deployment</td>
   <td>IANB</td>
   <td></td>
 </tr>
 <tr>
   <td></td>
-  <td><a href="42/02_tir_2026-10-13/README.md">Fredag 13-03-2026</a></td>
+  <td><a href="44/02_tir_2026-10-13/README.md">Fredag 13-03-2026</a></td>
   <td>Databasetransaktioner</td>
   <td>IANB</td>
   <td></td>
@@ -285,21 +285,21 @@
 <tr><td colspan="5"><strong>Ugens overordnede emner:</strong> Testbar kode med lav kobling</td></tr>
 <tr>
   <td>12</td>
-  <td><a href="42/03_ons_2026-10-14/README.md">Mandag 16-03-2026</a></td>
+  <td><a href="43/03_ons_2026-10-14/README.md">Mandag 16-03-2026</a></td>
   <td>Integrationstest med H2 database</td>
   <td>MANY</td>
   <td></td>
 </tr>
 <tr>
   <td></td>
-  <td><a href="42/05_fre_2026-10-16/README.md">Tirsdag 17-03-2026</a></td>
+  <td><a href="43/05_fre_2026-10-16/README.md">Tirsdag 17-03-2026</a></td>
   <td>Vejledning turistguide 3</td>
   <td>SIEB</td>
   <td></td>
 </tr>
 <tr>
   <td></td>
-  <td><a href="43/01_man_2026-10-26/README.md">Onsdag 18-03-2026</a></td>
+  <td><a href="43R/01_man_2026-10-26/README.md">Onsdag 18-03-2026</a></td>
   <td>Check-in/vejledning på Turistguide 3</td>
   <td>IANB/MANY</td>
   <td>Online</td>
@@ -313,7 +313,7 @@
 </tr>
 <tr>
   <td></td>
-  <td><a href="43/02_tir_2026-10-27/README.md">Fredag 20-03-2026</a></td>
+  <td><a href="44/04_tor_2026-10-29/README.md">Fredag 20-03-2026</a></td>
   <td>Fejlhåndtering i Spring Boot</td>
   <td>IANB</td>
   <td></td>
@@ -330,7 +330,7 @@
 </tr>
 <tr>
   <td></td>
-  <td><a href="13/02_tir_2026-03-24/README.md">Tirsdag 24-03-2026</a></td>
+  <td><a href="44/05_fre_2026-10-30/README.md">Tirsdag 24-03-2026</a></td>
   <td>Sessions</td>
   <td>SIEB</td>
   <td></td>
@@ -417,7 +417,7 @@
 </tr>
 <tr>
   <td></td>
-  <td><a href="45/02_tir_2026-11-03/README.md">Tirsdag 14-04-2026</a></td>
+  <td><a href="45/04_tor_2026-11-05/README.md">Tirsdag 14-04-2026</a></td>
   <td>Usability test</td>
   <td>SIEB</td>
   <td></td>
@@ -431,7 +431,7 @@
 </tr>
 <tr>
   <td></td>
-  <td><a href="45/04_tor_2026-11-05/README.md">Torsdag 16-04-2026</a></td>
+  <td><a href="45/02_tir_2026-11-03/README.md">Torsdag 16-04-2026</a></td>
   <td>ITF: projektvejledning</td>
   <td></td>
   <td></td>
@@ -494,7 +494,7 @@
 </tr>
 <tr>
   <td></td>
-  <td><a href="45/02_tir_2026-11-03/README.md">Tirsdag 28-04-2026</a></td>
+  <td><a href="45/04_tor_2026-11-05/README.md">Tirsdag 28-04-2026</a></td>
   <td>Usability test</td>
   <td>SIEB</td>
   <td></td>
