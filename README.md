@@ -280,7 +280,7 @@
 
 <tr>
   <td></td>
-  <td>Tirsdag 15-09-2026</td>
+  <td><a href="41/02_tir_2026-10-06/README.md">Tirsdag 15-09-2026</a></td>
   <td>ITF:</td>
   <td>DE</td>
   <td></td>

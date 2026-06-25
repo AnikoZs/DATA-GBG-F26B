@@ -337,7 +337,7 @@
 </tr>
 <tr>
   <td></td>
-  <td><a href="13/03_ons_2026-03-25/README.md">Onsdag 25-03-2026</a></td>
+  <td><a href="41/02_tir_2026-10-06/README.md">Onsdag 25-03-2026</a></td>
   <td>UNDERVISNINGFRI (Digital udviklingsdag)</td>
   <td></td>
   <td></td>
