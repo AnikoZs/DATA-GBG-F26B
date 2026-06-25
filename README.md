@@ -271,7 +271,7 @@
 <tr><td colspan="5"><strong>Ugens overordnede emner:</strong> Jdbc, databaseintegration i Spring Boot, database deployment</td></tr>
 
 <tr>
-  <td></td>
+  <td>41</td>
   <td><a href="41/01_man_2026-10-05/README.md">Mandag 05-10-2026</a></td>
   <td>Normalisering</td>
   <td>ANIZ</td>
@@ -279,38 +279,49 @@
 </tr>
 
 <tr>
-  <td>13</td>
-  <td><a href="13/01_man_2026-03-23/README.md">Mandag 23-03-2026</a></td>
-  <td>Vejledning turistguide</td>
-  <td>SIEB</td>
   <td></td>
-</tr>
-
-<tr>
-  <td>41</td>
-  <td><a href="41/02_tir_2026-10-06/README.md">Tirsdag 06-10-2026</a></td>
-  <td>JDBCtemplate og Spring 1, Turistguide del 3</td>
-  <td>TOG</td>
+  <td>Tirsdag 15-09-2026</td>
+  <td>ITF:</td>
+  <td>DE</td>
   <td></td>
 </tr>
 
 <tr>
   <td></td>
   <td><a href="41/03_ons_2026-10-07/README.md">Onsdag 07-10-2026</a></td>
-  <td>JDBCtemplate og Spring 2, functional interfaces</td>
+  <td>Check-in/vejledning på Turistguide 3</td>
   <td>ANIZ</td>
-  <td></td>
+  <td>Online ?</td>
 </tr>
 
 
 
 <tr>
   <td></td>
-  <td><a href="05_fre_2026-10-09/README.md">Fredag 09-10-2026</a></td>
-  <td>Azure deployment</td>
-  <td>JART</td>
-  <td>Samlæst</td>
+  <td><a href="41/04_tor_2026-10-08Del1/README.md">Torsdag 08-10-2026</a></td>
+  <td>JDBCtemplate og Spring 1, Turistguide del 3</td>
+  <td></td>
+  <td></td>
 </tr>
+
+<tr>
+  <td></td>
+  <td><a href="41/04_tor_2026-10-08Del2/README.md">Torsdag 08-10-2026</a></td>
+  <td>JDBCtemplate og Spring 2, functional interfaces</td>
+  <td>ANIZ</td>
+  <td></td>
+</tr>
+
+<tr>
+  <td></td>
+  <td><a href="41/05_fre_2026-10-09/README.md">Fredag 09-10-2026</a></td>
+  <td>Databasetransaktioner</td>
+  <td></td>
+  <td></td>
+</tr>
+
+
+
 
 <!-- UGE 42 -->
 <tr><td colspan="5"><strong>EFTERÅRSFERIE</strong></td></tr>
@@ -325,53 +336,48 @@
 
 <!-- UGE 43 -->
 <tr><td colspan="5"><strong>Ugens overordnede emner:</strong> Testbar kode med lav kobling</td></tr>
+
 <tr>
   <td>43</td>
   <td><a href="43/01_man_2026-10-12/README.md">Mandag 12-10-2026</a></td>
-  <td>Database deployment</td>
-  <td>ANIZ</td>
+  <td>Azure deployment</td>
+  <td></td>
   <td></td>
 </tr>
 
 
 <tr>
   <td></td>
-  <td><a href="44/02_tir_2026-10-13/README.md">Tirsdag 13-10-2026</a></td>
-  <td>Databasetransaktioner</td>
-  <td>TOG</td>
-  <td></td>
-</tr>
-
-<tr>
-  <td></td>
-  <td><a href="13/04_tor_2026-03-26/README.md">Torsdag 26-03-2026</a></td>
+  <td><a href="43/02_tir_2026-10-13/README.md">Tirsdag 13-10-2026</a></td>
   <td>ITF:</td>
-  <td></td>
+  <td>DE</td>
   <td></td>
 </tr>
+
 
 <tr>
   <td></td>
   <td><a href="43/03_ons_2026-10-14/README.md">Onsdag 14-10-2026</a></td>
-  <td>Integrationstest med H2 database</td>
+  <td>Database deployment</td>
   <td>ANIZ</td>
-  <td></td>
-</tr>
-<tr>
-  <td></td>
-  <td><a href="43/05_fre_2026-10-16/README.md">Fredag 16-10-2026</a></td>
-  <td>Vejledning turistguide 3</td>
-  <td>JART</td>
-  <td></td>
+  <td>Online?</td>
 </tr>
 
 
 <tr>
   <td></td>
-  <td><a href="13/05_fre_2026-03-27/README.md">Fredag 27-03-2026</a></td>
+  <td><a href="43/04_tor_2026-10-15/README.md">Torsdag 15-10-2026</a></td>
+  <td>Integrationstest med H2 database</td>
+  <td></td>
+  <td></td>
+</tr>
+
+<tr>
+  <td></td>
+  <td><a href="43/05_fre_2026-10-16/README.md">Fredag 27-03-2026</a></td>
   <td>Turistguide del 3 - feedback</td>
   <td></td>
-  <td>Online</td>
+  <td>Online?</td>
 </tr>
 
 

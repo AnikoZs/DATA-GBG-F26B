@@ -247,35 +247,35 @@
 <tr><td colspan="5"><strong>Ugens overordnede emner:</strong> Jdbc, databaseintegration i Spring Boot, database deployment</td></tr>
 <tr>
   <td>11</td>
-  <td><a href="41/02_tir_2026-10-06/README.md">Mandag 09-03-2026</a></td>
+  <td><a href="41/04_tor_2026-10-08Del1/README.md">Mandag 09-03-2026</a></td>
   <td>JDBCtemplate og Spring 1, Turistguide del 3</td>
   <td>MANY</td>
   <td></td>
 </tr>
 <tr>
   <td></td>
-  <td><a href="41/03_ons_2026-10-07/README.md">Tirsdag 10-03-2026</a></td>
+  <td><a href="41/04_tor_2026-10-08Del2/README.md">Tirsdag 10-03-2026</a></td>
   <td>JDBCtemplate og Spring 2, functional interfaces</td>
   <td>SIEB</td>
   <td></td>
 </tr>
 <tr>
   <td></td>
-  <td><a href="41/05_fre_2026-10-09/README.md">Onsdag 11-03-2026</a></td>
+  <td><a href="43/01_man_2026-10-12/README.md">Onsdag 11-03-2026</a></td>
   <td>Azure deployment</td>
   <td>MANY</td>
   <td>Samlæst</td>
 </tr>
 <tr>
   <td></td>
-  <td><a href="43/01_man_2026-10-12/README.md">Torsdag 12-03-2026</a></td>
+  <td><a href="43/03_ons_2026-10-14/README.md">Torsdag 12-03-2026</a></td>
   <td>Database deployment</td>
   <td>IANB</td>
   <td></td>
 </tr>
 <tr>
   <td></td>
-  <td><a href="44/02_tir_2026-10-13/README.md">Fredag 13-03-2026</a></td>
+  <td><a href="41/05_fre_2026-10-09/README.md">Fredag 13-03-2026</a></td>
   <td>Databasetransaktioner</td>
   <td>IANB</td>
   <td></td>
@@ -285,7 +285,7 @@
 <tr><td colspan="5"><strong>Ugens overordnede emner:</strong> Testbar kode med lav kobling</td></tr>
 <tr>
   <td>12</td>
-  <td><a href="43/03_ons_2026-10-14/README.md">Mandag 16-03-2026</a></td>
+  <td><a href="43/04_tor_2026-10-15/README.md">Mandag 16-03-2026</a></td>
   <td>Integrationstest med H2 database</td>
   <td>MANY</td>
   <td></td>
@@ -323,7 +323,7 @@
 <tr><td colspan="5"><strong>Ugens overordnede emner:</strong> Testbar kode med lav kobling, sessions</td></tr>
 <tr>
   <td>13</td>
-  <td><a href="13/01_man_2026-03-23/README.md">Mandag 23-03-2026</a></td>
+  <td><a href="41/03_ons_2026-10-07/README.md">Mandag 23-03-2026</a></td>
   <td>Vejledning turistguide</td>
   <td>SIEB</td>
   <td></td>
@@ -344,14 +344,14 @@
 </tr>
 <tr>
   <td></td>
-  <td><a href="13/04_tor_2026-03-26/README.md">Torsdag 26-03-2026</a></td>
+  <td><a href="43/02_tir_2026-10-13/README.md">Torsdag 26-03-2026</a></td>
   <td>ITF:</td>
   <td></td>
   <td></td>
 </tr>
 <tr>
   <td></td>
-  <td><a href="13/05_fre_2026-03-27/README.md">Fredag 27-03-2026</a></td>
+  <td><a href="43/05_fre_2026-10-16/README.md">Fredag 27-03-2026</a></td>
   <td>Turistguide del 3 - feedback</td>
   <td>MANY</td>
   <td>Online</td>

@@ -1,225 +1,317 @@
-# Deployment på Azure
+# Databasetransaktioner
 
 ## Beskrivelse
-Så er det tid til at flytte hjemmefra (127.0.0.1).
-Nu anvender vi GitHub Actions til et deployment workflow og deployer vores applikation på Microsoft Azure.
-Vi ser på "Cloud computing" som teknologimodel, der giver brugerne mulighed for at få adgang til delte computingressourcer (som f.eks. servere, lagring, databaser, netværkstjenester, software, applikationer og mere) via internettet, hvilket er kendt som "skyen".
-Vi kommer ind på begreberne: On-Prem, IaaS, PaaS, SaaS, BaaS, og ser på hvor Azure er placeret i disse.
+
 
 ## Forberedelse
-Se disse videoer:  
-[Cloud Computing Explained](https://www.youtube.com/watch?v=_a6us8kaq0g)  
-[Cloud Computing Services Models - IaaS PaaS SaaS Explained](https://www.youtube.com/watch?v=36zducUX16w)  
-[PaaS Explained](https://www.youtube.com/watch?v=QAbqJzd0PEE)  
-[How to deploy Spring boot app to azure with GitHub actions!](https://www.youtube.com/watch?v=sbcPyaqycyI)
 
-Opret en student account på Azure:  
-[How to Activate the Microsoft Azure Student Plan [2026 Full Guide]](https://www.youtube.com/watch?v=fvTVxDa3B10)  
-NB: Brug din EK microsoft account  
+Se videoer:
 
-Ressourcer:  
-[Azure student subscription - FAQ](https://learn.microsoft.com/da-dk/azure/education-hub/azure-dev-tools-teaching/program-faq#azure-for-students)  
-[Azure Latency Test](https://www.azurespeed.com/Azure/Latency)  
-[Azure Pricing Overview](https://azure.microsoft.com/en-us/pricing)
+[Transactions and data consistency](https://www.linkedin.com/learning/database-foundations-database-management/transactions-and-data-consistency?autoplay=true&resume=false&u=36836804)
+
+[ACID properties](https://www.linkedin.com/learning/database-foundations-database-management/acid-properties?autoplay=true&resume=false&u=36836804)
+
+[Understanding concurrency and locks](https://www.linkedin.com/learning/database-foundations-database-management/understanding-concurrency-and-locks?autoplay=true&resume=false&u=36836804)
 
 ## Læringsmål
-- Kender begreberne: On-Prem, IaaS, PaaS, SaaS, BaaS
-- Kan deploye en Spring Boot web applikation til Azure
-## Indhold  
 
-### Hvad er Cloud Computing?
-Cloud computing er en teknologimodel, hvor brugere får adgang til computing-ressourcer (servere, databaser, lagring, netværk, software mm.) via internettet i stedet for at eje og administrere lokal infrastruktur.  
+- At kunne forklare transaktioner og ACID-egenskaberne
+- At kunne beskrive samtidighedsproblemer
+- At kunne bruge isolationsniveauer til at håndtere samtidighed
+- At kunne implementere transaktionsstyring i applikationskode
 
-**Karakteristika:**
-- **On-demand selvbetjening** – ressourcer kan oprettes og styres uden manuel indgriben.
-- **Bred netværksadgang** – adgang fra enhver enhed med internet.
-- **Ressourcedeling** – ressourcer deles mellem mange brugere.
-- **Elasticitet** – skaler op/ned efter behov.
-- **Pay-as-you-go** – betal kun for det du bruger.
+## Indhold
+
+### Transaction
+
+```mysql
+UPDATE account SET balance = balance - 100 WHERE account_id = 1;
+UPDATE account SET balance = balance + 100 WHERE account_id = 2;
+```
+
+Hvad sker der hvis en af updates fejler?
 
 ---
 
-## Ansvarsdeling: On-Prem, IaaS, PaaS, SaaS, BaaS
-<img src="assets/cloudmodel.png" alt="Alt Text" width="700">
-Cloud-modellerne handler om, hvor ansvaret ligger mellem bruger og cloud-udbyder:
+En transaction i en database er en gruppe af databaseoperationer, der behandles som én samlet enhed.
 
-- **On-Prem**: Alt styres selv (hardware, netværk, OS, middleware, data, app).
-- **IaaS (Infrastructure as a Service)**: Udbyder leverer virtuelle maskiner, lagring og netværk. Brugeren styrer OS, middleware og apps.  
-  Eksempler: AWS EC2, Azure Virtual Machines.
-- **PaaS (Platform as a Service)**: Udbyder leverer en platform til udvikling og hosting. Brugeren fokuserer på kode og data.  
-  Eksempler: Azure App Services, Heroku.
-- **SaaS (Software as a Service)**: Hele applikationen leveres som service.  
-  Eksempler: Office 365, Google Workspace.
-- **BaaS (Backend as a Service)**: Addressere spicifikke backend behov til mobil- og webapps med API’er. (ex: database management, user authentication)  
-  Eksempler: Firebase, AWS Amplify.
+Enten gennemføres alle operationer i transaktionen, ellers gennemføres ingen.
 
-Eksempler på komponenter i de enkelte lag:  
-```
-+--------------------------------------------------+
-|                Applikation                       |
-|  (fx Spring Boot, Node.js, .NET, Web App)        |
-+--------------------------------------------------+
-|                Middleware                        |
-|  Runtime, Web Server, API, Messaging             |
-|  fx Java runtime, Tomcat, .NET runtime           |
-+--------------------------------------------------+
-|             Operativsystem (OS)                  |
-|        Linux / Windows Server                    |
-+--------------------------------------------------+
-|           Virtualiseringslag                     |
-|        Hypervisor (fx Hyper-V, Xen)              |
-|        Virtuelle maskiner (VM)                   |
-+--------------------------------------------------+
-|                Hardware                          |
-|        CPU, RAM, Disk, Netværk                   |
-|        Fysiske servere i datacenter              |
-+--------------------------------------------------+
-```
-
-Analogi til **at køre bil**:  
-- **On-Prem** = du ejer bilen og står for alle udgifter: anskaffelsespris, vedligeholdelse, forsikring, brændstof / el  
-- **IaaS** = du leaser bilen og står for visse udgifter: dæk, forsikring, brændstof / el   
-- **PaaS** = du lejer bilen og står kun for leje, brændstof / el.
-- **SaaS** = du tager en taxa eller bruger offentlig transport.  Pay-as-you-go
+Formålet er at sikre, at databasen forbliver konsistent, selv hvis der opstår fejl, nedbrud eller flere brugere arbejder samtidigt.
 
 ---
 
-### Azure App Service
+### ACID egenskaber
 
-**Azure App Service** er en **PaaS-løsning** hvor du kan hoste web-, API- og mobilapps uden at styre infrastrukturen.  
+Atomicity: Alt eller intet. Alle operationer gennemføres eller ingen.
 
-Fordele:
-- Hurtig deployment
-- Skalering og load balancing
-- Indbygget integration med GitHub Actions
+Consistency: Databasen forbliver i en gyldig tilstand før og efter transactionen.
+
+Isolation: Flere samtidige transactions påvirker ikke hinanden på en måde, der giver inkonsistente resultater.
+
+Durability: Når en transaction er committed, går ændringerne ikke tabt, selv ved systemnedbrud.
 
 ---
 
-### Deployment af en Spring Boot app til Azure
-Vi deployer [message appen](https://github.com/mnyborg/message) fra uge 5.  
-#### Opret en Azure Web App
-1. Log ind på [Azure Portal](https://portal.azure.com).
-2. Vælg **Create a resource** og vælg **Web App** 
-<img src="assets/azure1.png" alt="Alt Text" width="700">
+#### ```COMMIT```
 
-3. Opret en ny **Resource Group** (samling af ressourcer).
-<img src="assets/azure2.png" alt="Alt Text" width="700">
+I MySQL bliver statements som standard automatisk committet. 
+Autocommit deaktiveres for en transaktion ved at starte en transaktion.
 
-4. Indtast **instance details**  
-<img src="assets/azure3.png" alt="Alt Text" width="700">
-  
-Bemærk: Der er kun et begrænset antal regions til rådighed i "free plan", se Policy | Authoring | Assignments | Allowed resource deployment regions
+```mysql
+START TRANSACTION;
+UPDATE account SET balance = balance - 100 WHERE account_id = 1;
+UPDATE account SET balance = balance + 100 WHERE account_id = 2;
+COMMIT;
+```
 
-Hvis man vil se hordan de performer (latency test) kan man benytte [Azure Latency Test](https://www.azurespeed.com/Azure/Latency)   
+#### ```ROLLBACK```
 
-5. Vælg **Pricing plan**  
-Vælg **Free F1 Plan** for at undgå omkostninger. (vigitgt!) 
-<img src="assets/azure4.png" alt="Alt Text" width="700">
-Tryk "Review + create"
-<img src="assets/azure5.png" alt="Alt Text" width="700">  
-Tryk "Create"  
-Efter et stykke tid bliver appen deployed og man kan klikke "Go to resource":    
-<img src="assets/azure6.png" alt="Alt Text" width="700">  
-Nu vises appen's URL på Azure:  
-<img src="assets/azure7.png" alt="Alt Text" width="700">  
-Når man klkker på appen's URl kommer man til defualt landing page og man kan klikke på "Deployment center":  
-<img src="assets/azure8.png" alt="Alt Text" width="700">
-<img src="assets/azure9.png" alt="Alt Text" width="700">
-<img src="assets/azure10.png" alt="Alt Text" width="700">
+Ændringerne fra disse statements gemmes ikke i databasen, når ROLLBACK-kommandoen køres.
 
-#### Opret GitHub Actions Workflow  
-I deployment center angives Github som source og herefter skal GitHub autoriseres så Azure kan oprette en workflow fil i repoet:  
+```mysql
+START TRANSACTION;
+UPDATE account SET balance = balance - 100 WHERE account_id = 1;
+UPDATE account SET balance = balance + 100 WHERE account_id = 2;
+ROLLBACK;
+```
+---
 
-<img src="assets/azure11.png" alt="Alt Text" width="700">  
-Vælg organization, repository og branch. Klik herefter på "Save":  
-<img src="assets/azure12.png" alt="Alt Text" width="700">
+### Isolationsniveauer
 
-   
+Når flere brugere arbejder på databasen samtidig, kan deres transactions påvirke hinanden.
+
+---
+
+F.eks. en sæde reservationssystem:
 
 
-Når du forbinder dit repo til Azure via Deployment Center, oprettes filen: main_messageapp.yml i `.github/workflows` og jobbet starter på Github.  
+| Time | Transaction 1 (Customer 1) | Transaction 2 (Customer 2) |
+|-----|------------------------------|-----------------------------|
+| 1 | Reads seat A1 available | |
+| 2 | | Reads seat A1 available |
+| 3 | Books seat A1 | |
+| 4 | | Books seat A1 |
+| 5 | Commits transaction | |
+| 6 | | Commits transaction |
 
 
-```yaml
+Resultatet?
 
-# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
-# More GitHub Actions for Azure: https://github.com/Azure/actions
+**Lost update**
 
-name: Build and deploy JAR app to Azure Web App - messageapp
+En reservation foretaget af Customer 1 overskrives af Customer 2s reservation.
 
-on:
-  push:
-    branches:
-      - main
-  workflow_dispatch:
+---
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read #This is required for actions/checkout
+| Time | Transaction 1 (Customer 1) | Transaction 2 (Customer 2) |
+|-----|-----------------------------|-----------------------------|
+| 1 | Books seat B2 (uncommitted) | |
+| 2 | | Reads seat B2 as booked |
+| 3 | Cancels booking (rollback) | |
+| 4 | | Makes decision based on B2 booked |
 
-    steps:
-      - uses: actions/checkout@v4
 
-      - name: Set up Java version
-        uses: actions/setup-java@v4
-        with:
-          java-version: '21'
-          distribution: 'microsoft'
+Resulatet?
 
-      - name: Build with Maven
-        run: mvn clean install
+**Dirty Read**
 
-      - name: Upload artifact for deployment job
-        uses: actions/upload-artifact@v4
-        with:
-          name: java-app
-          path: '${{ github.workspace }}/target/*.jar'
+Customer 2 træffer en beslutning baseret på ikke-committede (“dirty”) reservation af Customer 1 som kan blive rullet tilbage.
 
-  deploy:
-    runs-on: ubuntu-latest
-    needs: build
-    permissions:
-      id-token: write #This is required for requesting the JWT
-      contents: read #This is required for actions/checkout
-  
-    steps:
-      - name: Download artifact from build job
-        uses: actions/download-artifact@v4
-        with:
-          name: java-app
-      
-      - name: Login to Azure
-        uses: azure/login@v2
-        with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_44C834E771524BACA6DAFC4156423165 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_6B37D42488B144458CF86343FF034A53 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_4C74A272CE3B43F786F4F7B150A1191D }}
+---
 
-      - name: Deploy to Azure Web App
-        id: deploy-to-webapp
-        uses: azure/webapps-deploy@v3
-        with:
-          app-name: 'messageapp'
-          slot-name: 'Production'
-          package: '*.jar'
-          
+| Time | Transaction 1 (Customer 1) | Transaction 2 (Customer 2) |
+|-----|-----------------------------|-----------------------------|
+| 1 | Checks seat C10: available | |
+| 2 | | Books seat C10 and commits |
+| 3 | Checks seat C10 again | |
+
+
+Resultatet?
+
+**Non-repeatable read**
+
+Customer 1 ser forskellig tilgængelighed for det samme sæde inden for den samme transaktion.
+
+---
+
+| Time | Transaction 1 (Customer 1) | Transaction 2 (Admin) |
+|-----|-----------------------------|------------------------|
+| 1 | Searches row D, sees 3 seats available (D1, D2, D3) | |
+| 2 | | Admin adds 2 extra seats: D4, D5, and commits |
+| 3 | Searches row D again, now sees 5 seats available (phantom seats D4, D5 appeared) | |
+
+Resultatet?
+
+**Phantom read**
+
+Nye (”fantom”) sæder dukker op under en transaktion.
+
+---
+
+| Problem | Forklaring                                                                                                                           |
+|--------|--------------------------------------------------------------------------------------------------------------------------------------|
+| Lost update | To transaktioner opdaterer den samme række, og den ene opdatering overskriver den anden.                                             |
+| Dirty read | En transaktion læser data, som en anden transaktion har ændret, men endnu ikke har committet.                                        |
+| Non-repeatable read | Den samme række læses to gange i samme transaktion, men værdien ændrer sig, fordi en anden transaktion har opdateret den.            |
+| Phantom read | En transaktion gentager en forespørgsel og får flere eller færre rækker, fordi en anden transaktion har indsat eller slettet rækker. |
+
+---
+
+| Isolation level   | Dirty read | Non-repeatable read | Phantom read | Lost update | Forklaring                                                                          |
+|-------------------|------------|---------------------|--------------|-------------|-------------------------------------------------------------------------------------|
+| READ UNCOMMITTED  | Possible   | Possible            | Possible     | Possible    | Transaktioner kan læse data som endnu ikke er committet. Hurtigt men usikkert.      |
+| READ COMMITTED    | Not possible | Possible          | Possible     | Possible    | Man kan kun læse committede data, men rækker kan ændre sig mellem læsninger.        |
+| REPEATABLE READ   | Not possible | Not possible      | Possible*    | Not possible | Samme række giver samme resultat i hele transaktionen. Standard i MySQL.            |
+| SERIALIZABLE      | Not possible | Not possible      | Not possible | Not possible | Transaktioner opfører sig som om de køres én ad gangen. Mest sikkert men langsomst. |
+
+(*MySQL InnoDB forhindrer phantom reads i REPEATABLE READ ofte via next-key locking.)
+
+---
+
+#### Setting isolationsniveauer
+
+Isolationssniveauer kan sættes på transaction, session (connection) eller global (server) niveau.
+
+```mysql
+SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;
+
+-- Avoid dirty read
+SET TRANSACTION ISOLATION LEVEL READ COMMITTED;
+
+-- Avoid dirty read, non-repeatable read, phantom read*
+-- Default MySQL level
+SET TRANSACTION ISOLATION LEVEL REPEATABLE READ;
+
+-- Avoid all read issues
+SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;
+```
+
+---
+NB. Opgaven skal udføres på localhost - ikke en deployede database.
+[Opgave: SQL Transactions](opgave_transaction_sql.md)
+
+---
+
+### Opsummering
+
+Transaktion - en gruppe operationer, der udføres atomisk.
+
+Isolationsniveau - regler for hvordan samtidige transactions må påvirke hinanden.
+
+Isolationsniveauer balancerer datasikkerhed vs. performance.
+
+Isolationsniveauer styrer, hvad transaktioner kan læse, mens databasens låsemekanismer forhindrer konflikter ved samtidige skrivninger.
+
+---
+
+### Transactions med JDBC og Spring Boot
+
+### JDBC Eksempel
+
+```java
+Connection con = null;
+
+try {
+con = dataSource.getConnection();
+    con.setAutoCommit(false);
+
+// statement 1
+PreparedStatement ps1 = con.prepareStatement(...);
+        ps1.executeUpdate();
+
+// statement 2
+PreparedStatement ps2 = con.prepareStatement(...);
+        ps2.executeUpdate();
+
+    con.commit();
+}
+
+catch (SQLException e) {
+        if (con != null) {
+        con.rollback();
+        }
+} 
+finally {
+        if (con != null) {
+        con.setAutoCommit(true);
+        con.close();
+    }
+}
+```
+
+---
+
+### Spring Boot Eksempel
+
+```java
+@Service
+public class AccountService {
+
+    private final AccountRepository accountRepository;
+
+    public AccountService(AccountRepository accountRepository) {
+        this.accountRepository = accountRepository;
+    }
+
+    @Transactional
+    public void transferMoney(int fromAccountId, int toAccountID, BigDecimal amount) {
+        accountRepository.withdraw(fromAccountId, amount);
+        accountRepository.deposit(toAccountID, amount);
+    }
+}
 
 ```
-<img src="assets/azure14.png" alt="Alt Text" width="700">  
 
-messageapp kan nu tilgås på Azure:  
+@Transactional fortæller Spring, at metoden skal køre som én transaktion.
 
-<img src="assets/azure16.png" alt="Alt Text" width="500">  
-Det genererede workflow indeholder også build jobbet. Vi behøver således ikke 
-vores oprindelige workflow. 
-Vi kan derfor disable det:   
-<img src="assets/azure17.png" alt="Alt Text" width="1000">  
-Alternativt kan man angive at Azure skal flette deploy jobbet ind i et eksisterende workflow.
+Hvis en Exception opstår, laver Spring automatisk rollback.
+
+```java
+@Repository
+public class AccountRepository {
+
+    private final JdbcTemplate jdbcTemplate;
+
+    public AccountRepository(JdbcTemplate jdbcTemplate) {
+        this.jdbcTemplate = jdbcTemplate;
+    }
+
+    public void withdraw(int accountId, BigDecimal amount) {
+        int rows = jdbcTemplate.update("UPDATE user_account SET balance = balance - ? WHERE account_id = ?", amount, accountId);
+        if (rows == 0) {
+            throw new IllegalArgumentException("Account not found");
+        }
+    }
+
+    public void deposit(int accountId, BigDecimal amount) {
+        int rows = jdbcTemplate.update("UPDATE user_account SET balance = balance + ? WHERE account_id = ?", amount, accountId);
+        if (rows == 0) {
+            throw new IllegalArgumentException("Account not found");
+        }
+    }
+}
+```
+
+---
+
+Service eller Repository lag?
+
+@Transactional bør placeres på service-metoder, fordi en transaktion ofte omfatter flere repository-kald.
+
+Service lag:
+
+---
+
+| Lag | Ansvar |
+|-----|--------|
+| Controller | HTTP / API |
+| Service | Forretningslogik og transaktioner |
+| Repository | Databaseadgang |
 
 
+---
+
+[Opgave: Transactions with Spring Boot](opgave_transaction_springboot.md)
 
 
-## Aktiviteter
-Idriftsæt Turistguide 2 på Azure
