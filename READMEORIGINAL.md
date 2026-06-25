@@ -410,7 +410,7 @@
 <tr><td colspan="5"><strong>Ugens overordnede emner:</strong> Projektarbejde</td></tr>
 <tr>
   <td>16</td>
-  <td><a href="45/01_man_2026-11-02/README.md">Mandag 13-04-2026</a></td>
+  <td><a href="45/01_man_2026-11-02R/README.md">Mandag 13-04-2026</a></td>
   <td>Wishlist projektvejledning</td>
   <td>MANY</td>
   <td>Online</td>

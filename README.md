@@ -554,35 +554,35 @@
 <tr><td colspan="5"><strong>Ugens overordnede emner:</strong> Projektarbejde</td></tr>
 <tr>
   <td>48</td>
-  <td><a href="49/01_man_2026-11-30/README.md">Mandag 04-05-2026</a></td>
+  <td><a href="48/01_man_2026-11-23/README.md">Mandag 23-11-2026</a></td>
   <td>Rapport, præsentation, eksamination</td>
   <td>MANY</td>
   <td></td>
 </tr>
 <tr>
   <td></td>
-  <td><a href="49/02_tir_2026-12-01/README.md">Tirsdag 05-05-2026</a></td>
+  <td><a href="48/02_tir_2026-11-24/README.md">Tirsdag 24-11-2026</a></td>
   <td>Eksamensprojekt - sprint 1</td>
-  <td>IANB</td>
+  <td></td>
   <td></td>
 </tr>
 <tr>
   <td></td>
-  <td><a href="49/03_ons_2026-12-02/README.md">Onsdag 06-05-2026</a></td>
+  <td><a href="49/03_ons_2026-11-25/README.md">Onsdag 25-11-2026</a></td>
   <td>Eksamensprojekt - statusmøde</td>
   <td>SIEB/MANY</td>
   <td>Online</td>
 </tr>
 <tr>
   <td></td>
-  <td><a href="49/04_tor_2026-12-03/README.md">Torsdag 07-05-2026</a></td>
+  <td><a href="49/04_tor_2026-11-26/README.md">Torsdag 26-11-2026</a></td>
   <td>ITF: PO-møde</td>
   <td></td>
   <td></td>
 </tr>
 <tr>
   <td></td>
-  <td><a href="49/05_fre_2026-12-04/README.md">Fredag 08-05-2026</a></td>
+  <td><a href="49/05_fre_2026-11-27/README.md">Fredag 27-11-2026</a></td>
   <td>ITF:</td>
   <td></td>
   <td></td>
@@ -698,19 +698,19 @@
 # Projekter
 ```mermaid
 gantt
-    title Projektoverblik – 2. semester F2026
+    title Projektoverblik – 2. semester E2026
     dateFormat  YYYY-MM-DD
     axisFormat  %d-%m
 
     section Turistguide
-    Turistguide (samlet)            :active, tg, 2026-01-26, 2026-03-27
-    Turistguide 1                   :tg1, 2026-01-26, 2026-02-06
-    Turistguide 2                   :tg2, 2026-02-09, 2026-02-27
-    Turistguide 3                   :tg3, 2026-03-09, 2026-03-27
+    Turistguide (samlet)            :active, tg, 2026-08-24, 2026-10-23
+    Turistguide 1                   :tg1, 2026-08-24, 2026-09-04
+    Turistguide 2                   :tg2, 2026-09-07, 2026-09-25
+    Turistguide 3                   :tg3, 2026-09-28, 2026-10-23
 
     section Miniprojekt
-    Miniprojekt                     :mini, 2026-04-09, 2026-04-24
+    Miniprojekt                     :mini, 2026-10-26, 2026-11-13
 
     section Eksamensprojekt
-    Eksamensprojekt                 :exam, 2026-04-27, 2026-05-27
+    Eksamensprojekt                 :exam, 2026-11-16, 2026-12-16
 ```
