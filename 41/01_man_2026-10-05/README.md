@@ -1,190 +1,285 @@
-# Turistguide del 3, normalisering
+
+# JDBCtemplate og Spring 1, Turistguide del 3
 
 ## Beskrivelse
+I dag ser vi på hvordan man får adgang til data i en database fra et Java program. Vi skal bruge JdbcTemplate, som er en del af Springboot, til dette.
+Vi starter med en standalone applikation som viser de basale ting. Herefter ser vi på hvordan vi kan integrere JDBCTemplate i en Spring boot applikation
 
-Vi ser hvordan vi kan strukturere en database og organiserer data i tabeller på en måde,
-der reducerer redundans (gentagne data) og forbedrer dataintegritet.
-Det gør vi ved at kigge på 1., 2. og 3. normalform.
 
 ## Forberedelse
+Se denne video:  
+[Spring JDBC Template Tutorial: Learn to build a full CRUD application in Spring Boot](https://www.youtube.com/watch?v=0uLqdBpYAVA&list=PLEeqf0uSZqXutWJ-xNpSs5X4WdwKqBmab)  
 
-Se videoer:
-
-[Database Normalization: 1NF to 5NF in Plain English](https://youtu.be/wY1qqBFnKhk?si=XlyCfYIsKi5zKYNi) - kun op til 3NF (12.00) 
-
-[Normalization: first, second and third form](https://www.linkedin.com/learning-login/share?account=36836804&forceAccount=false&redirect=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Fprogramming-foundations-databases-2%2Fnormalization-2%3Ftrk%3Dshare_video_url%26shareId%3DIsTl7CEuSX6lgNbtVl3%252Ftg%253D%253D)
+Resourcer:  
+[JDBC standalone eksempel](https://github.com/EK-DATA-2SEM-PROGSYSTEK/jdbctemplate_standalone)  
+[JDBC Spring Boot eksempel(countries-starter)](https://github.com/EK-DATA-2SEM-PROGSYSTEK/countries-starter)
 
 ## Læringsmål
+- Kan lave simpel databaseapplikation, som forbinder et Java Springboot-projekt med en MYSQL database.
+- Kan bruge JdbcTemplate, herunder forklare centrale biblioteksklasser og metoder der er involveret i at få forbindelsen mellem Springboot og databasen til at virke
+- Kan integrere brugen af JDBC Teplate i en Spring Boot applikation, herunder brug af environment variable  
 
-- At kunne beskrive 1., 2. og 3. normalform.
-- At kunne normalisere en database til 3. normalform.
+## Indhold  
+Vi skal arbejde med databaseadgang i Spring Boot ved hjælp af JDBC Template. Fokus er på at forstå, hvordan data bevæger sig mellem MySQL-tabeller og Java-objekter.
+Undervisningen er bygget op omkring repository-klasser, hvor al databaseadgang samles ét sted, så koden er let at forstå, teste og videreudvikle.
 
-## Indhold
+### Opsætning i Spring Boot: DataSource, dependencies og Dependency Injection
 
----
+Før vi kan bruge JdbcTemplate, skal Spring Boot have to ting på plads:
 
-### Normalisering
+- Dependencies til JDBC + MySQL (så Spring kan oprette en DataSource)
+- DataSource-konfiguration (URL, bruger, password)
+- Et repository, hvor vi injicerer JdbcTemplate (Dependency Injection)
 
-#### Formålet
+#### 1) Dependencies (pom.xml)
 
-Det overordnede formål med normalisering er at organisere data i en database på en måde,
-der reducerer redundans og forbedrer dataintegritet.
+I et Maven-projekt skal man som minimum have disse dependencies:  
+```
+<dependency>
+  <groupId>org.springframework.boot</groupId>
+  <artifactId>spring-boot-starter-jdbc</artifactId>
+</dependency>
 
-Det gøres ved at opdele data i mindre, relaterede tabeller og definere relationer mellem dem.
-
-Data integritet betyder, at data i et system er korrekte, konsistente og pålidelige når
-de bliver oprettet, opdateret, lagret og anvendes.
-
----
-
-#### Normalformer
-
-Først Normalform (1NF) - Atomiske værdier
-- Alle attributter (kolonner) indeholder kun atomiske værdier (ikke lister eller gentagelser).
-
-Andet Normalform (2NF) - Fuld funktionel afhængighed
-- Kræver først 1NF.
-- Alle ikke-nøgleattributter skal være fuldt afhængige af hele komposit primærnøglen (ikke kun en del af den).
-
-Tredje Normalform (3NF) - Ingen transitive afhængigheder
-- Kræver først 2NF.
--  Ingen ikke-nøgleattributter må være afhængige af en anden ikke-nøgleattribut
-
----
-
-
-1NF?
-
-| CourseID (PK) | CourseName        | LecturerEmail         | LecturerName | StudentID (FK)      |
-|---------------|-------------------|-----------------------|--------------|---------------------|
-| 101           | Databaser         | jensen@uni.example    | Anja Jensen  | S1001, S1002, S1003 |
-| 102           | Programming       | hansen@uni.example    | Emma Hansen  | S1004, S1005        |
-| 103           | Web Development   | smith@uni.example     | John Smith   | S1001, S1006        |
-
----
-
-1NF? 2NF?
-
-| CourseID (PK) | StudentID (PK, FK) | CourseName      | LecturerEmail       | LecturerName |
-|---------------|--------------------|-----------------|---------------------|--------------|
-| 101           | S1001              | Databaser       | jensen@uni.example  | Anja Jensen  |
-| 101           | S1002              | Databaser       | jensen@uni.example  | Anja Jensen  |
-| 101           | S1003              | Databaser       | jensen@uni.example  | Anja Jensen  |
-| 102           | S1004              | Programming     | hansen@uni.example  | Emma Hansen  |
-| 102           | S1005              | Programming     | hansen@uni.example  | Emma Hansen  |
-| 103           | S1001              | Web Development | smith@uni.example   | John Smith   |
-| 103           | S1006              | Web Development | smith@uni.example   | John Smith   |
-
----
-
-2NF? 3NF?
-
-Courses
-
-| CourseID (PK) | CourseName      | LecturerEmail       | LecturerName |
-|---------------|-----------------|---------------------|--------------|
-| 101           | Databaser       | jensen@uni.example  | Anja Jensen  |
-| 102           | Programming     | hansen@uni.example  | Emma Hansen  |
-| 103           | Web Development | smith@uni.example   | John Smith   |
-
-
-Enrollments
-
-| CourseID (PK, FK) | StudentID (PK, FK) |
-|-------------------|--------------------|
-| 101               | S1001              |
-| 101               | S1002              |
-| 101               | S1003              |
-| 102               | S1004              |
-| 102               | S1005              |
-| 103               | S1001              |
-| 103               | S1006              |
-
----
-
-3NF?
-
-Lecturers
-
-| LecturerID (PK) | LecturerEmail        | LecturerName |
-|-----------------|----------------------|--------------|
-| 1               | jensen@uni.example   | Anja Jensen  |
-| 2               | hansen@uni.example   | Emma Hansen  |
-| 3               | smith@uni.example    | John Smith   |
-
-
-Courses
-
-| CourseID (PK) | CourseName      | LecturerID (FK) |
-|---------------|-----------------|-----------------|
-| 101           | Databaser       | 1               |
-| 102           | Programming     | 2               |
-| 103           | Web Development | 3               |
-
-Enrollments
-
-| CourseID (PK, FK) | StudentNo (PK, FK) |
-|-------------------|--------------------|
-| 101               | S1001              |
-| 101               | S1002              |
-| 101               | S1003              |
-| 102               | S1004              |
-| 102               | S1005              |
-| 103               | S1001              |
-| 103               | S1006              |
-
-
-Students
-
-| StudentNo (PK) | StudentName       |
-|----------------|-------------------|
-| S1001          | Mads Nielsen      |
-| S1002          | Emma Sørensen     |
-| S1003          | William Andersen  |
-| S1004          | Sarah Johnson     |
-| S1005          | Peter Christensen |
-| S1006          | Lucy Thompson     |
-
----
-
-#### ER-Diagram
-
-```mermaid
-erDiagram
-    LECTURERS {
-      int LecturerID PK
-      string LecturerEmail "UNIQUE, NOT NULL"
-      string LecturerName  "NOT NULL"
-    }
-
-    COURSES {
-      int CourseID PK
-      string CourseName   "NOT NULL"
-      int LecturerID FK   "NOT NULL"
-    }
-
-    STUDENTS {
-      string StudentNo  PK
-      string StudentName "NOT NULL"
-    }
-
-    ENROLLMENTS {
-      int CourseID   FK "PK part, NOT NULL"
-      string StudentNo FK "PK part, NOT NULL"
-    }
-
-    LECTURERS ||--o{ COURSES : "teaches"
-    COURSES   ||--o{ ENROLLMENTS : "has"
-    STUDENTS  ||--o{ ENROLLMENTS : "takes"
+<dependency>
+  <groupId>com.mysql</groupId>
+  <artifactId>mysql-connector-j</artifactId>
+  <scope>runtime</scope>
+</dependency>
 ```
 
----
+spring-boot-starter-jdbc giver bl.a. JdbcTemplate, og MySQL-driveren gør, at Spring kan forbinde til MySQL.  
 
-#### Opgave: Normalisering
+#### 2) DataSource-konfiguration (application.properties)
 
-[Opgave: Normalisering](opgave_normalisering.pdf)
+Spring Boot opretter automatisk en DataSource, hvis spring.datasource.* er sat.
 
----
+Eksempel med environment variables (anbefalet):  
+```
+spring.datasource.url=${DB_URL}
+spring.datasource.username=${DB_USERNAME}
+spring.datasource.password=${DB_PASSWORD}
+```
+Hvis du lokalt vil teste “hurtigt”, kan du hardcode (men det bør undgås i delte repos):  
+```
+# kun til lokal test (ikke anbefalet i git)
+spring.datasource.url=jdbc:mysql://localhost:3306/your_db?useSSL=false&serverTimezone=UTC
+spring.datasource.username=root
+spring.datasource.password=secret
+```
+DataSource-konfiguration er “input” til Spring Boot, som derefter kan levere en færdig JdbcTemplate til din kode.  
+
+#### 3) Dependency Injection i repository (JdbcTemplate)
+
+Når Spring Boot har oprettet DataSource, opretter den også en JdbcTemplate-bean.
+Den kan vi injicere i vores repository via constructor injection:  
+```
+@Repository
+public class PersonRepository {
+
+    private final JdbcTemplate jdbcTemplate;
+
+    public PersonRepository(JdbcTemplate jdbcTemplate) {
+        this.jdbcTemplate = jdbcTemplate;
+    }
+
+    // database-metoder kommer her...
+}
+```
+
+#### Læsning af data med JdbcTemplate
+
+Vi starter med at hente data fra databasen ved hjælp af SQL-SELECT.
+JdbcTemplate håndterer forbindelsen til databasen, mens vi selv skriver SQL’en.
+
+Eksempel: hent alle personer fra databasen  
+```
+public List<Person> findAll() {
+    String sql = "SELECT id, name, age FROM person";
+    return jdbcTemplate.query(sql, new PersonRowMapper());
+}
+```
+Her returneres en liste af Person-objekter, som oprettes ved hjælp af en RowMapper:  
+```
+public class PersonRowMapper implements RowMapper<Person> {
+
+    @Override
+    public Person mapRow(ResultSet rs, int rowNum) throws SQLException {
+        return new Person(
+                rs.getInt("id"),
+                rs.getString("name"),
+                rs.getInt("age")
+        );
+    }
+}
+```
+
+#### Hent ét objekt baseret på id
+Når vi forventer præcis én række fra databasen, kan vi skrive en metode, der henter et objekt ud fra primærnøglen:  
+```
+public Person findById(int id) {
+    String sql = "SELECT id, name, age FROM person WHERE id = ?";
+    return jdbcTemplate.queryForObject(sql, new PersonRowMapper(), id);
+}
+```
+Her bruges ? som placeholder, så parametrene bindes sikkert og korrekt.  
+
+#### Oprettelse og ændring af data
+
+Når vi vil ændre data i databasen, anvender vi jdbcTemplate.update(...).
+Den samme metode bruges til både INSERT, UPDATE og DELETE.
+
+Eksempel: indsæt en ny person
+```
+public int create(Person person) {
+    String sql = "INSERT INTO person (name, age) VALUES (?, ?)";
+    return jdbcTemplate.update(sql, person.getName(), person.getAge());
+}
+```
+Eksempel: opdater en eksisterende person  
+```
+public int update(Person person) {
+    String sql = "UPDATE person SET name = ?, age = ? WHERE id = ?";
+    return jdbcTemplate.update(
+            sql,
+            person.getName(),
+            person.getAge(),
+            person.getId()
+    );
+}
+```
+Metodernes returværdi angiver, hvor mange rækker der blev påvirket.  
+
+### Konfiguration med environment variables
+
+For at undgå hardcodede databaseoplysninger anvendes environment variables sammen med application.properties.
+
+Eksempel fra application.properties:  
+```
+spring.datasource.url=${DB_URL}
+spring.datasource.username=${DB_USERNAME}
+spring.datasource.password=${DB_PASSWORD}
+```
+Værdierne sættes som environment variables i udviklingsmiljøet (fx IntelliJ), så:
+- koden kan deles i Git
+- credentials ikke eksponeres
+- konfiguration kan variere mellem miljøer
+
+### Brug af Spring Profiles
+
+Når en applikation skal køre i forskellige miljøer (fx udvikling, test og produktion), er det vigtigt, at konfigurationen kan variere uden at ændre Java-koden.
+I Spring Boot løses dette ved hjælp af Spring Profiles.
+
+En profile repræsenterer et bestemt miljø og gør det muligt at have forskellige konfigurationer for samme applikation.
+
+#### Konfigurationsfiler pr. miljø
+
+I stedet for kun én application.properties, kan man opdele konfigurationen i forkellige profiler:
+```
+application.properties
+application-dev.properties
+application-test.properties
+application-prod.properties
+```
+Eksempel: application-dev.properties
+```
+spring.datasource.url=jdbc:mysql://localhost:3306/countries_dev
+spring.datasource.username=dev_user
+spring.datasource.password=dev_pw
+```
+Eksempel: application-prod.properties
+```
+spring.datasource.url=jdbc:mysql://prod-db:3306/countries
+spring.datasource.username=prod_user
+spring.datasource.password=prod_pw
+```
+Spring Boot vælger automatisk den rigtige fil baseret på den aktive profile.  
+application.properties er altid basis-konfigurationen, og de profil-specifikke filer (fx application-dev.properties) arver automatisk værdierne fra den.
+
+
+#### Aktivering af et profile
+
+Der er flere måder at aktivere en profile på.
+
+Via application.properties
+```
+spring.profiles.active=dev
+```
+Via environment variable
+```
+SPRING_PROFILES_ACTIVE=prod
+```
+#### Sammenhæng med DataSource og JdbcTemplate
+
+Når en profile er aktivt:
+1. Spring Boot læser den tilhørende application-<profile>.properties
+2. DataSource konfigureres ud fra disse værdier
+3. JdbcTemplate oprettes automatisk baseret på DataSource
+4. Repository-klasserne bruger JdbcTemplate uden at kende miljøet
+
+Repository-koden er identisk i alle miljøer og det bliver herved muligt at holde samme kodebase og skifte miljø uden kodeændringer.
+
+#### Typiske anvendelser af Spring Profiles
+
+Spring Profiles bruges typisk til:
+
+- forskellige databaser (H2 / MySQL)
+- forskellig mængde logging
+- testdata vs. produktionsdata
+- mock vs. rigtig integration
+ 
+#### Valg af kode baseret på active profile  
+Eksempel: @Profile("test") - koden aktives kun hvis active profile er 'test'
+
+### Automatisk initialisering af databasen
+
+Spring Boot kan automatisk køre SQL-scripts ved opstart.
+
+Eksempel:
+```
+spring.sql.init.schema-locations=classpath:schema.sql
+spring.sql.init.data-locations=classpath:data.sql
+spring.sql.init.mode=always
+```
+Dette sikrer, at:
+- tabeller oprettes automatisk
+- databasen starter med kendte testdata
+- alle på holdet arbejder mod samme struktur
+
+### Manuel oprettelse og initialisering af databasen
+
+I et produktionsmiljø er det normalt ikke applikationen, der opretter tabeller eller indsætter startdata automatisk ved opstart. I stedet håndteres databaseændringer typisk af drift/DevOps via fx:
+
+- manuelle SQL-scripts kørt én gang
+- release-processer (migrations)
+- databaseadministration (DBA) / platform-team
+
+Det betyder, at databasen (schema + evt. basisdata) skal være oprettet på forhånd, og applikationen skal kun forbinde og arbejde med data.  
+
+I Spring Boot kan man sikre sig, at init-scripts (schema.sql og data.sql) ikke køres automatisk ved at sætte følgende i application-prod.properties:  
+```
+spring.sql.init.mode=never
+```
+Det forhindrer Spring Boot i at køre SQL-init scripts automatisk.
+Hvis man bruger profiles, kan man f.eks. have dette i prod-profilen, mens dev-profilen gerne må initialisere:  
+```
+# application-dev.properties
+spring.sql.init.mode=always
+
+# application-prod.properties
+spring.sql.init.mode=never
+```
+
+
+## Aktiviteter  
+Afprøv [JDBC standalone eksempel](https://github.com/EK-DATA-2SEM-PROGSYSTEK/jdbctemplate_standalone)  på din laptop.  
+Få [JDBC Spring Boot eksempel(countries-starter)](https://github.com/EK-DATA-2SEM-PROGSYSTEK/countries-starter) til at virke på din laptop
+
+
+
+
+
+
+
 
 
 

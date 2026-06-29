@@ -1,317 +1,192 @@
-# Databasetransaktioner
+# Turistguide del 3, normalisering
 
 ## Beskrivelse
 
+Vi ser hvordan vi kan strukturere en database og organiserer data i tabeller på en måde,
+der reducerer redundans (gentagne data) og forbedrer dataintegritet.
+Det gør vi ved at kigge på 1., 2. og 3. normalform.
 
 ## Forberedelse
 
 Se videoer:
 
-[Transactions and data consistency](https://www.linkedin.com/learning/database-foundations-database-management/transactions-and-data-consistency?autoplay=true&resume=false&u=36836804)
+[Database Normalization: 1NF to 5NF in Plain English](https://youtu.be/wY1qqBFnKhk?si=XlyCfYIsKi5zKYNi) - kun op til 3NF (12.00) 
 
-[ACID properties](https://www.linkedin.com/learning/database-foundations-database-management/acid-properties?autoplay=true&resume=false&u=36836804)
-
-[Understanding concurrency and locks](https://www.linkedin.com/learning/database-foundations-database-management/understanding-concurrency-and-locks?autoplay=true&resume=false&u=36836804)
+[Normalization: first, second and third form](https://www.linkedin.com/learning-login/share?account=36836804&forceAccount=false&redirect=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Fprogramming-foundations-databases-2%2Fnormalization-2%3Ftrk%3Dshare_video_url%26shareId%3DIsTl7CEuSX6lgNbtVl3%252Ftg%253D%253D)
 
 ## Læringsmål
 
-- At kunne forklare transaktioner og ACID-egenskaberne
-- At kunne beskrive samtidighedsproblemer
-- At kunne bruge isolationsniveauer til at håndtere samtidighed
-- At kunne implementere transaktionsstyring i applikationskode
+- At kunne beskrive 1., 2. og 3. normalform.
+- At kunne normalisere en database til 3. normalform.
 
 ## Indhold
 
-### Transaction
+---
 
-```mysql
-UPDATE account SET balance = balance - 100 WHERE account_id = 1;
-UPDATE account SET balance = balance + 100 WHERE account_id = 2;
-```
+### Normalisering
 
-Hvad sker der hvis en af updates fejler?
+#### Formålet
+
+Det overordnede formål med normalisering er at organisere data i en database på en måde,
+der reducerer redundans og forbedrer dataintegritet.
+
+Det gøres ved at opdele data i mindre, relaterede tabeller og definere relationer mellem dem.
+
+Data integritet betyder, at data i et system er korrekte, konsistente og pålidelige når
+de bliver oprettet, opdateret, lagret og anvendes.
 
 ---
 
-En transaction i en database er en gruppe af databaseoperationer, der behandles som én samlet enhed.
+#### Normalformer
 
-Enten gennemføres alle operationer i transaktionen, ellers gennemføres ingen.
+Først Normalform (1NF) - Atomiske værdier
+- Alle attributter (kolonner) indeholder kun atomiske værdier (ikke lister eller gentagelser).
 
-Formålet er at sikre, at databasen forbliver konsistent, selv hvis der opstår fejl, nedbrud eller flere brugere arbejder samtidigt.
+Andet Normalform (2NF) - Fuld funktionel afhængighed
+- Kræver først 1NF.
+- Alle ikke-nøgleattributter skal være fuldt afhængige af hele komposit primærnøglen (ikke kun en del af den).
 
----
-
-### ACID egenskaber
-
-Atomicity: Alt eller intet. Alle operationer gennemføres eller ingen.
-
-Consistency: Databasen forbliver i en gyldig tilstand før og efter transactionen.
-
-Isolation: Flere samtidige transactions påvirker ikke hinanden på en måde, der giver inkonsistente resultater.
-
-Durability: Når en transaction er committed, går ændringerne ikke tabt, selv ved systemnedbrud.
+Tredje Normalform (3NF) - Ingen transitive afhængigheder
+- Kræver først 2NF.
+-  Ingen ikke-nøgleattributter må være afhængige af en anden ikke-nøgleattribut
 
 ---
 
-#### ```COMMIT```
 
-I MySQL bliver statements som standard automatisk committet. 
-Autocommit deaktiveres for en transaktion ved at starte en transaktion.
+1NF?
 
-```mysql
-START TRANSACTION;
-UPDATE account SET balance = balance - 100 WHERE account_id = 1;
-UPDATE account SET balance = balance + 100 WHERE account_id = 2;
-COMMIT;
-```
-
-#### ```ROLLBACK```
-
-Ændringerne fra disse statements gemmes ikke i databasen, når ROLLBACK-kommandoen køres.
-
-```mysql
-START TRANSACTION;
-UPDATE account SET balance = balance - 100 WHERE account_id = 1;
-UPDATE account SET balance = balance + 100 WHERE account_id = 2;
-ROLLBACK;
-```
----
-
-### Isolationsniveauer
-
-Når flere brugere arbejder på databasen samtidig, kan deres transactions påvirke hinanden.
+| CourseID (PK) | CourseName        | LecturerEmail         | LecturerName | StudentID (FK)      |
+|---------------|-------------------|-----------------------|--------------|---------------------|
+| 101           | Databaser         | jensen@uni.example    | Anja Jensen  | S1001, S1002, S1003 |
+| 102           | Programming       | hansen@uni.example    | Emma Hansen  | S1004, S1005        |
+| 103           | Web Development   | smith@uni.example     | John Smith   | S1001, S1006        |
 
 ---
 
-F.eks. en sæde reservationssystem:
+1NF? 2NF?
 
-
-| Time | Transaction 1 (Customer 1) | Transaction 2 (Customer 2) |
-|-----|------------------------------|-----------------------------|
-| 1 | Reads seat A1 available | |
-| 2 | | Reads seat A1 available |
-| 3 | Books seat A1 | |
-| 4 | | Books seat A1 |
-| 5 | Commits transaction | |
-| 6 | | Commits transaction |
-
-
-Resultatet?
-
-**Lost update**
-
-En reservation foretaget af Customer 1 overskrives af Customer 2s reservation.
+| CourseID (PK) | StudentID (PK, FK) | CourseName      | LecturerEmail       | LecturerName |
+|---------------|--------------------|-----------------|---------------------|--------------|
+| 101           | S1001              | Databaser       | jensen@uni.example  | Anja Jensen  |
+| 101           | S1002              | Databaser       | jensen@uni.example  | Anja Jensen  |
+| 101           | S1003              | Databaser       | jensen@uni.example  | Anja Jensen  |
+| 102           | S1004              | Programming     | hansen@uni.example  | Emma Hansen  |
+| 102           | S1005              | Programming     | hansen@uni.example  | Emma Hansen  |
+| 103           | S1001              | Web Development | smith@uni.example   | John Smith   |
+| 103           | S1006              | Web Development | smith@uni.example   | John Smith   |
 
 ---
 
-| Time | Transaction 1 (Customer 1) | Transaction 2 (Customer 2) |
-|-----|-----------------------------|-----------------------------|
-| 1 | Books seat B2 (uncommitted) | |
-| 2 | | Reads seat B2 as booked |
-| 3 | Cancels booking (rollback) | |
-| 4 | | Makes decision based on B2 booked |
+2NF? 3NF?
+
+Courses
+
+| CourseID (PK) | CourseName      | LecturerEmail       | LecturerName |
+|---------------|-----------------|---------------------|--------------|
+| 101           | Databaser       | jensen@uni.example  | Anja Jensen  |
+| 102           | Programming     | hansen@uni.example  | Emma Hansen  |
+| 103           | Web Development | smith@uni.example   | John Smith   |
 
 
-Resulatet?
+Enrollments
 
-**Dirty Read**
-
-Customer 2 træffer en beslutning baseret på ikke-committede (“dirty”) reservation af Customer 1 som kan blive rullet tilbage.
-
----
-
-| Time | Transaction 1 (Customer 1) | Transaction 2 (Customer 2) |
-|-----|-----------------------------|-----------------------------|
-| 1 | Checks seat C10: available | |
-| 2 | | Books seat C10 and commits |
-| 3 | Checks seat C10 again | |
-
-
-Resultatet?
-
-**Non-repeatable read**
-
-Customer 1 ser forskellig tilgængelighed for det samme sæde inden for den samme transaktion.
+| CourseID (PK, FK) | StudentID (PK, FK) |
+|-------------------|--------------------|
+| 101               | S1001              |
+| 101               | S1002              |
+| 101               | S1003              |
+| 102               | S1004              |
+| 102               | S1005              |
+| 103               | S1001              |
+| 103               | S1006              |
 
 ---
 
-| Time | Transaction 1 (Customer 1) | Transaction 2 (Admin) |
-|-----|-----------------------------|------------------------|
-| 1 | Searches row D, sees 3 seats available (D1, D2, D3) | |
-| 2 | | Admin adds 2 extra seats: D4, D5, and commits |
-| 3 | Searches row D again, now sees 5 seats available (phantom seats D4, D5 appeared) | |
+3NF?
 
-Resultatet?
+Lecturers
 
-**Phantom read**
+| LecturerID (PK) | LecturerEmail        | LecturerName |
+|-----------------|----------------------|--------------|
+| 1               | jensen@uni.example   | Anja Jensen  |
+| 2               | hansen@uni.example   | Emma Hansen  |
+| 3               | smith@uni.example    | John Smith   |
 
-Nye (”fantom”) sæder dukker op under en transaktion.
 
----
+Courses
 
-| Problem | Forklaring                                                                                                                           |
-|--------|--------------------------------------------------------------------------------------------------------------------------------------|
-| Lost update | To transaktioner opdaterer den samme række, og den ene opdatering overskriver den anden.                                             |
-| Dirty read | En transaktion læser data, som en anden transaktion har ændret, men endnu ikke har committet.                                        |
-| Non-repeatable read | Den samme række læses to gange i samme transaktion, men værdien ændrer sig, fordi en anden transaktion har opdateret den.            |
-| Phantom read | En transaktion gentager en forespørgsel og får flere eller færre rækker, fordi en anden transaktion har indsat eller slettet rækker. |
+| CourseID (PK) | CourseName      | LecturerID (FK) |
+|---------------|-----------------|-----------------|
+| 101           | Databaser       | 1               |
+| 102           | Programming     | 2               |
+| 103           | Web Development | 3               |
 
----
+Enrollments
 
-| Isolation level   | Dirty read | Non-repeatable read | Phantom read | Lost update | Forklaring                                                                          |
-|-------------------|------------|---------------------|--------------|-------------|-------------------------------------------------------------------------------------|
-| READ UNCOMMITTED  | Possible   | Possible            | Possible     | Possible    | Transaktioner kan læse data som endnu ikke er committet. Hurtigt men usikkert.      |
-| READ COMMITTED    | Not possible | Possible          | Possible     | Possible    | Man kan kun læse committede data, men rækker kan ændre sig mellem læsninger.        |
-| REPEATABLE READ   | Not possible | Not possible      | Possible*    | Not possible | Samme række giver samme resultat i hele transaktionen. Standard i MySQL.            |
-| SERIALIZABLE      | Not possible | Not possible      | Not possible | Not possible | Transaktioner opfører sig som om de køres én ad gangen. Mest sikkert men langsomst. |
+| CourseID (PK, FK) | StudentNo (PK, FK) |
+|-------------------|--------------------|
+| 101               | S1001              |
+| 101               | S1002              |
+| 101               | S1003              |
+| 102               | S1004              |
+| 102               | S1005              |
+| 103               | S1001              |
+| 103               | S1006              |
 
-(*MySQL InnoDB forhindrer phantom reads i REPEATABLE READ ofte via next-key locking.)
 
----
+Students
 
-#### Setting isolationsniveauer
-
-Isolationssniveauer kan sættes på transaction, session (connection) eller global (server) niveau.
-
-```mysql
-SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;
-
--- Avoid dirty read
-SET TRANSACTION ISOLATION LEVEL READ COMMITTED;
-
--- Avoid dirty read, non-repeatable read, phantom read*
--- Default MySQL level
-SET TRANSACTION ISOLATION LEVEL REPEATABLE READ;
-
--- Avoid all read issues
-SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;
-```
-
----
-NB. Opgaven skal udføres på localhost - ikke en deployede database.
-[Opgave: SQL Transactions](opgave_transaction_sql.md)
+| StudentNo (PK) | StudentName       |
+|----------------|-------------------|
+| S1001          | Mads Nielsen      |
+| S1002          | Emma Sørensen     |
+| S1003          | William Andersen  |
+| S1004          | Sarah Johnson     |
+| S1005          | Peter Christensen |
+| S1006          | Lucy Thompson     |
 
 ---
 
-### Opsummering
+#### ER-Diagram
 
-Transaktion - en gruppe operationer, der udføres atomisk.
-
-Isolationsniveau - regler for hvordan samtidige transactions må påvirke hinanden.
-
-Isolationsniveauer balancerer datasikkerhed vs. performance.
-
-Isolationsniveauer styrer, hvad transaktioner kan læse, mens databasens låsemekanismer forhindrer konflikter ved samtidige skrivninger.
-
----
-
-### Transactions med JDBC og Spring Boot
-
-### JDBC Eksempel
-
-```java
-Connection con = null;
-
-try {
-con = dataSource.getConnection();
-    con.setAutoCommit(false);
-
-// statement 1
-PreparedStatement ps1 = con.prepareStatement(...);
-        ps1.executeUpdate();
-
-// statement 2
-PreparedStatement ps2 = con.prepareStatement(...);
-        ps2.executeUpdate();
-
-    con.commit();
-}
-
-catch (SQLException e) {
-        if (con != null) {
-        con.rollback();
-        }
-} 
-finally {
-        if (con != null) {
-        con.setAutoCommit(true);
-        con.close();
-    }
-}
-```
-
----
-
-### Spring Boot Eksempel
-
-```java
-@Service
-public class AccountService {
-
-    private final AccountRepository accountRepository;
-
-    public AccountService(AccountRepository accountRepository) {
-        this.accountRepository = accountRepository;
+```mermaid
+erDiagram
+    LECTURERS {
+      int LecturerID PK
+      string LecturerEmail "UNIQUE, NOT NULL"
+      string LecturerName  "NOT NULL"
     }
 
-    @Transactional
-    public void transferMoney(int fromAccountId, int toAccountID, BigDecimal amount) {
-        accountRepository.withdraw(fromAccountId, amount);
-        accountRepository.deposit(toAccountID, amount);
-    }
-}
-
-```
-
-@Transactional fortæller Spring, at metoden skal køre som én transaktion.
-
-Hvis en Exception opstår, laver Spring automatisk rollback.
-
-```java
-@Repository
-public class AccountRepository {
-
-    private final JdbcTemplate jdbcTemplate;
-
-    public AccountRepository(JdbcTemplate jdbcTemplate) {
-        this.jdbcTemplate = jdbcTemplate;
+    COURSES {
+      int CourseID PK
+      string CourseName   "NOT NULL"
+      int LecturerID FK   "NOT NULL"
     }
 
-    public void withdraw(int accountId, BigDecimal amount) {
-        int rows = jdbcTemplate.update("UPDATE user_account SET balance = balance - ? WHERE account_id = ?", amount, accountId);
-        if (rows == 0) {
-            throw new IllegalArgumentException("Account not found");
-        }
+    STUDENTS {
+      string StudentNo  PK
+      string StudentName "NOT NULL"
     }
 
-    public void deposit(int accountId, BigDecimal amount) {
-        int rows = jdbcTemplate.update("UPDATE user_account SET balance = balance + ? WHERE account_id = ?", amount, accountId);
-        if (rows == 0) {
-            throw new IllegalArgumentException("Account not found");
-        }
+    ENROLLMENTS {
+      int CourseID   FK "PK part, NOT NULL"
+      string StudentNo FK "PK part, NOT NULL"
     }
-}
+
+    LECTURERS ||--o{ COURSES : "teaches"
+    COURSES   ||--o{ ENROLLMENTS : "has"
+    STUDENTS  ||--o{ ENROLLMENTS : "takes"
 ```
 
 ---
 
-Service eller Repository lag?
+#### Opgave: Normalisering
 
-@Transactional bør placeres på service-metoder, fordi en transaktion ofte omfatter flere repository-kald.
-
-Service lag:
+[Opgave: Normalisering](opgave_normalisering.pdf)
 
 ---
 
-| Lag | Ansvar |
-|-----|--------|
-| Controller | HTTP / API |
-| Service | Forretningslogik og transaktioner |
-| Repository | Databaseadgang |
 
 
----
-
-[Opgave: Transactions with Spring Boot](opgave_transaction_springboot.md)
 
 

@@ -209,35 +209,35 @@
 <tr><td colspan="5"><strong>Ugens overordnede emner:</strong> Databaser, SQL, E/R modellering</td></tr>
 <tr>
   <td>10</td>
-  <td><a href="40/01_man_2026-09-28/README.md">Mandag 02-03-2026</a></td>
+  <td><a href="40/05_fre_2026-10-02/README.md">Mandag 02-03-2026</a></td>
   <td>E/R model og relationel model</td>
   <td>MANY</td>
   <td></td>
 </tr>
 <tr>
   <td></td>
-  <td><a href="40/03_ons_2026-09-30/README.md">Tirsdag 03-03-2026</a></td>
+  <td><a href="40/01_man_2026-09-28/README.md">Tirsdag 03-03-2026</a></td>
   <td>Introduktion til SQL og DDL</td>
   <td>SIEB</td>
   <td>(AFLYST)</td>
 </tr>
 <tr>
   <td></td>
-  <td><a href="40/04_tor_2026-10-01/README.md">Onsdag 04-03-2026</a></td>
+  <td><a href="40/03_ons_2026-09-30/README.md">Onsdag 04-03-2026</a></td>
   <td>SQL</td>
   <td>MANY</td>
   <td>Online</td>
 </tr>
 <tr>
   <td></td>
-  <td><a href="40/05_fre_2026-10-02/README.md">Torsdag 05-03-2026</a></td>
+  <td><a href="40/04_tor_2026-10-01/README.md">Torsdag 05-03-2026</a></td>
   <td>SQL joins</td>
   <td>IANB</td>
   <td></td>
 </tr>
 <tr>
   <td></td>
-  <td><a href="41/01_man_2026-10-05/README.md">Fredag 06-03-2026</a></td>
+  <td><a href="41/05_fre_2026-10-09/README.md">Fredag 06-03-2026</a></td>
   <td>Normalisering</td>
   <td>IANB</td>
   <td></td>
@@ -247,14 +247,14 @@
 <tr><td colspan="5"><strong>Ugens overordnede emner:</strong> Jdbc, databaseintegration i Spring Boot, database deployment</td></tr>
 <tr>
   <td>11</td>
-  <td><a href="41/04_tor_2026-10-08Del1/README.md">Mandag 09-03-2026</a></td>
+  <td><a href="41/01_man_2026-10-05/README.md">Mandag 09-03-2026</a></td>
   <td>JDBCtemplate og Spring 1, Turistguide del 3</td>
   <td>MANY</td>
   <td></td>
 </tr>
 <tr>
   <td></td>
-  <td><a href="41/04_tor_2026-10-08Del2/README.md">Tirsdag 10-03-2026</a></td>
+  <td><a href="41/03_ons_2026-10-07/README.md">Tirsdag 10-03-2026</a></td>
   <td>JDBCtemplate og Spring 2, functional interfaces</td>
   <td>SIEB</td>
   <td></td>
@@ -275,7 +275,7 @@
 </tr>
 <tr>
   <td></td>
-  <td><a href="41/05_fre_2026-10-09/README.md">Fredag 13-03-2026</a></td>
+  <td><a href="41/04_tor_2026-10-08/README.md">Fredag 13-03-2026</a></td>
   <td>Databasetransaktioner</td>
   <td>IANB</td>
   <td></td>
@@ -323,7 +323,7 @@
 <tr><td colspan="5"><strong>Ugens overordnede emner:</strong> Testbar kode med lav kobling, sessions</td></tr>
 <tr>
   <td>13</td>
-  <td><a href="41/03_ons_2026-10-07/README.md">Mandag 23-03-2026</a></td>
+  <td><a href="41/03_ons_2026-10-07R/README.md">Mandag 23-03-2026</a></td>
   <td>Vejledning turistguide</td>
   <td>SIEB</td>
   <td></td>

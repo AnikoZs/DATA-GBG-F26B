@@ -224,12 +224,13 @@
 <!-- UGE 40 -->
 <tr><td colspan="5"><strong>Projekt:</strong> Turistguide 3</td></tr>
 <tr><td colspan="5"><strong>Ugens overordnede emner:</strong> Databaser, SQL, E/R modellering</td></tr>
+
 <tr>
   <td>40</td>
   <td><a href="40/01_man_2026-09-28/README.md">Mandag 28-09-2026</a></td>
-  <td>E/R model og relationel model</td>
+  <td>Introduktion til SQL og DDL</td>
   <td>ANIZ</td>
-  <td></td>
+  <td>Online ?</td>
 </tr>
 
 <tr>
@@ -239,33 +240,32 @@
   <td>DE</td>
   <td></td>
 </tr>
+
+
 <tr>
   <td></td>
   <td><a href="40/03_ons_2026-09-30/README.md">Onsdag 30-09-2026</a></td>
-  <td>Introduktion til SQL og DDL</td>
+  <td>SQL og Turistguide 3</td>
   <td>ANIZ</td>
-  <td>Online ?</td>
+  <td></td>
 </tr>
 
 
 <tr>
   <td></td>
   <td><a href="40/04_tor_2026-10-01/README.md">Torsdag 01-10-2026</a></td>
-  <td>SQL og Turistguide 3</td>
-  <td></td>
+  <td>SQL joins</td>
+  <td>BEHU</td>
   <td></td>
 </tr>
-
 
 <tr>
   <td></td>
   <td><a href="40/05_fre_2026-10-02/README.md">Fredag 02-10-2026</a></td>
-  <td>SQL joins</td>
+  <td>E/R model og relationel model</td>
   <td>JART</td>
   <td></td>
 </tr>
-
-
 
 <!-- UGE 41 -->
 <tr><td colspan="5"><strong>Ugens overordnede emner:</strong> Jdbc, databaseintegration i Spring Boot, database deployment</td></tr>
@@ -273,53 +273,43 @@
 <tr>
   <td>41</td>
   <td><a href="41/01_man_2026-10-05/README.md">Mandag 05-10-2026</a></td>
-  <td>Normalisering</td>
+  <td>JDBCtemplate og Spring 1, Turistguide del 3</td>
   <td>ANIZ</td>
   <td></td>
 </tr>
 
 <tr>
   <td></td>
-  <td><a href="41/02_tir_2026-10-06/README.md">Tirsdag 15-09-2026</a></td>
+  <td><a href="41/02_tir_2026-10-06/README.md">Tirsdag 06-10-2026</a></td>
   <td>ITF:</td>
   <td>DE</td>
   <td></td>
 </tr>
 
+
 <tr>
   <td></td>
   <td><a href="41/03_ons_2026-10-07/README.md">Onsdag 07-10-2026</a></td>
-  <td>Check-in/vejledning på Turistguide 3</td>
+  <td>JDBCtemplate og Spring 2, functional interfaces + Touristguide 3</td>
   <td>ANIZ</td>
-  <td>Online ?</td>
-</tr>
-
-
-
-<tr>
-  <td></td>
-  <td><a href="41/04_tor_2026-10-08Del1/README.md">Torsdag 08-10-2026</a></td>
-  <td>JDBCtemplate og Spring 1, Turistguide del 3</td>
-  <td></td>
   <td></td>
 </tr>
 
 <tr>
   <td></td>
-  <td><a href="41/04_tor_2026-10-08Del2/README.md">Torsdag 08-10-2026</a></td>
-  <td>JDBCtemplate og Spring 2, functional interfaces</td>
-  <td>ANIZ</td>
+  <td><a href="41/04_tor_2026-10-08/README.md">Torsdag 08-10-2026</a></td>
+  <td>Databasetransaktioner</td>
+  <td>BEHU</td>
   <td></td>
 </tr>
 
 <tr>
   <td></td>
   <td><a href="41/05_fre_2026-10-09/README.md">Fredag 09-10-2026</a></td>
-  <td>Databasetransaktioner</td>
-  <td></td>
+  <td>Normalisering</td>
+  <td>JART</td>
   <td></td>
 </tr>
-
 
 
 
