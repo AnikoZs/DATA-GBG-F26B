@@ -448,28 +448,28 @@
 <tr><td colspan="5"><strong>Ugens overordnede emner:</strong> Projektarbejde</td></tr>
 <tr>
   <td>17</td>
-  <td><a href="46/01_man_2026-04-20/README.md">Mandag 20-04-2026</a></td>
+  <td><a href="44/03_ons_2026-10-28/README.md">Mandag 20-04-2026</a></td>
   <td>Readme og contributing, Wishlist projektvejledning</td>
   <td>MANY</td>
   <td>Online</td>
 </tr>
 <tr>
   <td></td>
-  <td><a href="46/02_tir_2026-04-21/README.md">Tirsdag 21-04-2026</a></td>
+  <td><a href="46/02_tir_2026-11-10/README.md">Tirsdag 21-04-2026</a></td>
   <td>Wishlist projektvejledning</td>
   <td>SIEB</td>
   <td></td>
 </tr>
 <tr>
   <td></td>
-  <td><a href="46/03_ons_2026-04-22/README.md">Onsdag 22-04-2026</a></td>
+  <td><a href="46/03_ons_2026-11-11/README.md">Onsdag 22-04-2026</a></td>
   <td>Wishlist - projektvejledning</td>
   <td>IANB/MANY</td>
   <td>Online</td>
 </tr>
 <tr>
   <td></td>
-  <td><a href="46/04_tor_2026-04-23/README.md">Torsdag 23-04-2026</a></td>
+  <td><a href="46/04_tor_2026-11-12/README.md">Torsdag 23-04-2026</a></td>
   <td>ITF: Fremlæggelse</td>
   <td></td>
   <td></td>
