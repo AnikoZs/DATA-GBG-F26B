@@ -65,7 +65,7 @@
 </tr>
 <tr>
   <td></td>
-  <td><a href="36/02_tir_2026-09-01/README.md">Torsdag 03-09-2026</a></td>
+  <td><a href="36/02_tir_2026-09-01/README.md">Tirsdag 01-09-2026</a></td>
   <td>ITF:</td>
   <td>DE</td>
   <td></td>
@@ -80,7 +80,7 @@
 
 <tr>
   <td></td>
-  <td><a href="36/02_tir_2026-09-01/README.md">Tirsdag 01-09-2026</a></td>
+  <td><a href="36/04_tor_2026-09-03/README.md">Torsdag 03-09-2026</a></td>
   <td>Java Collections, Map</td>
   <td>BEHU</td>
   <td></td>
@@ -329,7 +329,7 @@
 
 <tr>
   <td>43</td>
-  <td><a href="43/01_man_2026-10-12/README.md">Mandag 12-10-2026</a></td>
+  <td><a href="43/01_man_2026-10-19/README.md">Mandag 19-10-2026</a></td>
   <td>Azure deployment</td>
   <td></td>
   <td></td>
@@ -338,7 +338,7 @@
 
 <tr>
   <td></td>
-  <td><a href="43/02_tir_2026-10-13/README.md">Tirsdag 13-10-2026</a></td>
+  <td><a href="43/02_tir_2026-10-20/README.md">Tirsdag 20-10-2026</a></td>
   <td>ITF:</td>
   <td>DE</td>
   <td></td>
@@ -347,7 +347,7 @@
 
 <tr>
   <td></td>
-  <td><a href="43/03_ons_2026-10-14/README.md">Onsdag 14-10-2026</a></td>
+  <td><a href="43/03_ons_2026-10-21/README.md">Onsdag 21-10-2026</a></td>
   <td>Database deployment</td>
   <td>ANIZ</td>
   <td>Online?</td>
@@ -356,7 +356,7 @@
 
 <tr>
   <td></td>
-  <td><a href="43/04_tor_2026-10-15/README.md">Torsdag 15-10-2026</a></td>
+  <td><a href="43/04_tor_2026-10-22/README.md">Torsdag 22-10-2026</a></td>
   <td>Integrationstest med H2 database</td>
   <td>BEHU</td>
   <td></td>
@@ -364,7 +364,7 @@
 
 <tr>
   <td></td>
-  <td><a href="43/05_fre_2026-10-16/README.md">Fredag 27-03-2026</a></td>
+  <td><a href="43/05_fre_2026-10-23/README.md">Fredag 23-10-2026</a></td>
   <td>Turistguide del 3 - feedback</td>
   <td>JART</td>
   <td></td>

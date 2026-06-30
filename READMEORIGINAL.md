@@ -261,14 +261,14 @@
 </tr>
 <tr>
   <td></td>
-  <td><a href="43/01_man_2026-10-12/README.md">Onsdag 11-03-2026</a></td>
+  <td><a href="43/01_man_2026-10-19/README.md">Onsdag 11-03-2026</a></td>
   <td>Azure deployment</td>
   <td>MANY</td>
   <td>Samlæst</td>
 </tr>
 <tr>
   <td></td>
-  <td><a href="43/03_ons_2026-10-14/README.md">Torsdag 12-03-2026</a></td>
+  <td><a href="43/03_ons_2026-10-21/README.md">Torsdag 12-03-2026</a></td>
   <td>Database deployment</td>
   <td>IANB</td>
   <td></td>
@@ -285,14 +285,14 @@
 <tr><td colspan="5"><strong>Ugens overordnede emner:</strong> Testbar kode med lav kobling</td></tr>
 <tr>
   <td>12</td>
-  <td><a href="43/04_tor_2026-10-15/README.md">Mandag 16-03-2026</a></td>
+  <td><a href="43/04_tor_2026-10-22/README.md">Mandag 16-03-2026</a></td>
   <td>Integrationstest med H2 database</td>
   <td>MANY</td>
   <td></td>
 </tr>
 <tr>
   <td></td>
-  <td><a href="43/05_fre_2026-10-16/README.md">Tirsdag 17-03-2026</a></td>
+  <td><a href="43/05_fre_2026-10-23/README.md">Tirsdag 17-03-2026</a></td>
   <td>Vejledning turistguide 3</td>
   <td>SIEB</td>
   <td></td>
@@ -344,14 +344,14 @@
 </tr>
 <tr>
   <td></td>
-  <td><a href="43/02_tir_2026-10-13/README.md">Torsdag 26-03-2026</a></td>
+  <td><a href="43/02_tir_2026-10-20/README.md">Torsdag 26-03-2026</a></td>
   <td>ITF:</td>
   <td></td>
   <td></td>
 </tr>
 <tr>
   <td></td>
-  <td><a href="43/05_fre_2026-10-16/README.md">Fredag 27-03-2026</a></td>
+  <td><a href="43/05_fre_2026-10-23/README.md">Fredag 27-03-2026</a></td>
   <td>Turistguide del 3 - feedback</td>
   <td>MANY</td>
   <td>Online</td>
