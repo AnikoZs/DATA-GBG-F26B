@@ -11,7 +11,6 @@
 </tr>
 </thead>
 <tbody>
-
 <!-- UGE 35 -->
 <tr><td colspan="5"><strong>Projekt:</strong> Turistguide 1</td></tr>
 <tr><td colspan="5"><strong>Ugens overordnede emner:</strong> Spring Boot intro</td></tr>
@@ -285,7 +284,6 @@
   <td>DE</td>
   <td></td>
 </tr>
-
 
 <tr>
   <td></td>
