@@ -41,7 +41,7 @@
   <td></td>
   <td><a href="35/04_tor_2026-08-27/README.md">Torsdag 27-08-2026</a></td>
   <td>Check-in/vejledning på Turistguide 1</td>
-  <td></td>
+  <td>BEHU</td>
   <td></td>
 </tr>
 
@@ -64,7 +64,7 @@
 </tr>
 <tr>
   <td></td>
-  <td><a href="36/02_tir_2026-09-01/README.md">Torsdag 03-09-2026</a></td>
+  <td><a href="36/02_tir_2026-09-01/README.md">Tirsdag 01-09-2026</a></td>
   <td>ITF:</td>
   <td>DE</td>
   <td></td>
@@ -79,9 +79,9 @@
 
 <tr>
   <td></td>
-  <td><a href="36/02_tir_2026-09-01/README.md">Tirsdag 01-09-2026</a></td>
+  <td><a href="36/04_tor_2026-09-03/README.md">Torsdag 03-09-2026</a></td>
   <td>Java Collections, Map</td>
-  <td></td>
+  <td>BEHU</td>
   <td></td>
 </tr>
 
@@ -124,7 +124,7 @@
   <td></td>
   <td><a href="37/04_tor_2026-09-10/README.md">Torsdag 10-09-2026</a></td>
   <td>ThymeLeaf, HTML forms &amp; Thymeleaf, Turistguide 2</td>
-  <td></td>
+  <td>BEHU</td>
   <td></td>
 </tr>
 
@@ -166,7 +166,7 @@
   <td></td>
   <td><a href="38/04_tor_2026-09-17/README.md">Torsdag 17-09-2026</a></td>
   <td>Kode review med pull requests</td>
-  <td>TOG</td>
+  <td>BEHU</td>
   <td></td>
 </tr>
 
@@ -184,7 +184,7 @@
 <tr>
   <td>39</td>
   <td><a href="39/01_man_2026-09-21/README.md">Mandag 21-09-2026</a></td>
-  <td>GitHub Actions 1</td>
+  <td>DevOps 1</td>
   <td>ANIZ</td>
   <td></td>
 </tr>
@@ -200,7 +200,7 @@
 <tr>
   <td></td>
   <td><a href="39/03_ons_2026-09-23/README.md">Onsdag 23-09-2026</a></td>
-  <td>GitHub Actions 2</td>
+  <td>DevOps 2</td>
   <td>ANIZ</td>
   <td>Online?</td>
 </tr>
@@ -208,7 +208,7 @@
   <td></td>
   <td><a href="39/04_tor_2026-09-24/README.md">Torsdag 24-09-2026</a></td>
   <td>Check-in/vejledning på Turistguide 2</td>
-  <td></td>
+  <td>BEHU</td>
   <td></td>
 </tr>
 
@@ -323,11 +323,11 @@
 
 
 <!-- UGE 43 -->
-<tr><td colspan="5"><strong>Ugens overordnede emner:</strong> Testbar kode med lav kobling</td></tr>
+<tr><td colspan="5"><strong>Ugens overordnede emner:</strong> Deployment, Testbar kode med lav kobling</td></tr>
 
 <tr>
   <td>43</td>
-  <td><a href="43/01_man_2026-10-12/README.md">Mandag 12-10-2026</a></td>
+  <td><a href="43/01_man_2026-10-19/README.md">Mandag 19-10-2026</a></td>
   <td>Azure deployment</td>
   <td></td>
   <td></td>
@@ -336,7 +336,7 @@
 
 <tr>
   <td></td>
-  <td><a href="43/02_tir_2026-10-13/README.md">Tirsdag 13-10-2026</a></td>
+  <td><a href="43/02_tir_2026-10-20/README.md">Tirsdag 20-10-2026</a></td>
   <td>ITF:</td>
   <td>DE</td>
   <td></td>
@@ -345,7 +345,7 @@
 
 <tr>
   <td></td>
-  <td><a href="43/03_ons_2026-10-14/README.md">Onsdag 14-10-2026</a></td>
+  <td><a href="43/03_ons_2026-10-21/README.md">Onsdag 21-10-2026</a></td>
   <td>Database deployment</td>
   <td>ANIZ</td>
   <td>Online?</td>
@@ -354,18 +354,18 @@
 
 <tr>
   <td></td>
-  <td><a href="43/04_tor_2026-10-15/README.md">Torsdag 15-10-2026</a></td>
+  <td><a href="43/04_tor_2026-10-22/README.md">Torsdag 22-10-2026</a></td>
   <td>Integrationstest med H2 database</td>
-  <td></td>
+  <td>BEHU</td>
   <td></td>
 </tr>
 
 <tr>
   <td></td>
-  <td><a href="43/05_fre_2026-10-16/README.md">Fredag 27-03-2026</a></td>
+  <td><a href="43/05_fre_2026-10-23/README.md">Fredag 23-10-2026</a></td>
   <td>Turistguide del 3 - feedback</td>
+  <td>JART</td>
   <td></td>
-  <td>Online?</td>
 </tr>
 
 
@@ -373,21 +373,21 @@
 
 <!-- UGE 44 -->
 <tr><td colspan="5"><strong>Projekt:</strong> Miniprojekt</td></tr>
-<tr><td colspan="5"><strong>Ugens overordnede emner:</strong> UX/UI, GitHub Projects</td></tr>
+<tr><td colspan="5"><strong>Ugens overordnede emner:</strong> GitHub Projects</td></tr>
 <tr><td colspan="5"><strong>Ugens overordnede emner:</strong> Testbar kode med lav kobling, sessions</td></tr>
 
 <tr>
   <td>44</td>
   <td><a href="44/01_man_2026-10-26/README.md">Mandag 26-10-2026</a></td>
   <td>Kickoff - Wishlist-projekt &amp; GitHub Projects</td>
-  <td></td>
+  <td>ANIZ</td>
   <td></td>
 </tr>
 
 <tr>
   <td></td>
   <td><a href="44/02_tir_2026-10-27/README.md">Tirsdag 27-11-2026</a></td>
-  <td>ITF: Wishlist PO - møde</td>
+  <td>ITF</td>
   <td>DE</td>
   <td></td>
 </tr>
@@ -395,8 +395,8 @@
 <tr>
   <td></td>
   <td><a href="44/03_ons_2026-10-28/README.md">Onsdag 28-10-2026</a></td>
-  <td>Wishlist - projektvejledning</td>
-  <td></td>
+  <td>README og CONTRIBUTING, Wishlist - projektvejledning</td>
+  <td>ANIZ</td>
   <td></td>
 </tr>
 
@@ -404,7 +404,7 @@
   <td></td>
   <td><a href="44/04_tor_2026-10-29/README.md">Torsdag 29-10-2026</a></td>
   <td>Fejlhåndtering i Spring Boot</td>
-  <td></td>
+  <td>BEHU</td>
   <td></td>
 </tr>
 
@@ -413,13 +413,13 @@
   <td></td>
   <td><a href="44/05_fre_2026-10-30/README.md">Fredag 30-10-2026</a></td>
   <td>Sessions</td>
-  <td></td>
+  <td>JART</td>
   <td></td>
 </tr>
 
 
 <!-- UGE 45 -->
-<tr><td colspan="5"><strong>Ugens overordnede emner:</strong> Projektarbejde</td></tr>
+<tr><td colspan="5"><strong>Ugens overordnede emner:</strong> UX/UI, Projektarbejde</td></tr>
 
 <tr>
   <td>45</td>
@@ -441,15 +441,15 @@
   <td></td>
   <td><a href="45/03_ons_2026-11-04/README.md">Onsdag 04-11-2026</a></td>
   <td>Check-in/vejledning på Wishlist</td>
-  <td></td>
+  <td>ANIZ</td>
   <td>Online</td>
 </tr>
 
 <tr>
   <td></td>
-  <td><a href="45/04_tor_2026-11-05/README.md">Tirsdag 05-11-2026</a></td>
+  <td><a href="45/04_tor_2026-11-05/README.md">Torsdag 05-11-2026</a></td>
   <td>Usability test</td>
-  <td></td>
+  <td>BEHU</td>
   <td></td>
 </tr>
 
@@ -462,7 +462,7 @@
 </tr>
 
 <!-- UGE 46 -->
-<tr><td colspan="5"><strong>Ugens overordnede emner:</strong> Projektarbejde</td></tr>
+<tr><td colspan="5"><strong>Ugens overordnede emner:</strong> Afslutning og fremlæggelse af projektarbejde</td></tr>
 <tr>
   <td>46</td>
   <td><a href="46/01_man_2026-11-09/README.md">Mandag 09-11-2026</a></td>
@@ -488,14 +488,14 @@
   <td></td>
   <td><a href="46/04_tor_2026-11-12/README.md">Torsdag 12-11-2026</a></td>
   <td>Fremlæggelse SYS/PROG/TEK</td>
-  <td></td>
+  <td>BEHU</td>
   <td></td>
 </tr>
 <tr>
   <td></td>
   <td><a href="46/05_fre_2026-11-13/README.md">Fredag 13-11-2026</a></td>
   <td>Fremlæggelse SYS/PROG/TEK</td>
-  <td></td>
+  <td>JART</td>
   <td></td>
 </tr>
 
@@ -509,32 +509,35 @@
   <td>ANIZ</td>
   <td></td>
 </tr>
+
 <tr>
   <td></td>
-  <td><a href="45/04_tor_2026-11-05/README.md">Tirsdag 28-04-2026</a></td>
-  <td>Usability test</td>
-  <td>SIEB</td>
-  <td></td>
-</tr>
-<tr>
-  <td></td>
-  <td><a href="47/01_man_2026-11-16/README.md">Onsdag 29-04-2026</a></td>
-  <td>Præsentation af eksamensprojekt (Sprint 0)</td>
-  <td>SIEB</td>
-  <td></td>
-</tr>
-<tr>
-  <td></td>
-  <td><a href="47/02_tir_2026-11-17/README.md">Torsdag 30-04-2026</a></td>
+  <td><a href="47/02_tir_2026-11-17/README.md">Tirsdag 17-11-2026</a></td>
   <td>ITF: PO-møde</td>
   <td></td>
   <td></td>
 </tr>
+
 <tr>
   <td></td>
-  <td><a href="47/04_tor_2026-11-19/README.md">Fredag 01-05-2026</a></td>
+  <td><a href="47/03_ons_2026-11-18/README.md">Onsdag 18-11-2026</a></td>
+  <td>Eksamensprojekt vejledning</td>
+  <td>ANIZ</td>
+  <td></td>
+</tr>
+<tr>
+  <td></td>
+  <td><a href="47/04_tor_2026-11-19/README.md">Torsdag 19-11-2026</a></td>
+  <td>Eksamensprojekt - sprint 1 (Sprint 1)</td>
+  <td>BEHU</td>
+  <td></td>
+</tr>
+
+<tr>
+  <td></td>
+  <td><a href="47/05_fre_2026-11-20/README.md">Fredag 20-11-2026</a></td>
   <td>Eksamensprojekt - sprint 1</td>
-  <td>IANB</td>
+  <td>JART</td>
   <td></td>
 </tr>
 
@@ -544,35 +547,35 @@
   <td>48</td>
   <td><a href="48/01_man_2026-11-23/README.md">Mandag 23-11-2026</a></td>
   <td>Rapport, præsentation, eksamination</td>
-  <td>MANY</td>
+  <td>ANIZ</td>
   <td></td>
 </tr>
 <tr>
   <td></td>
   <td><a href="48/02_tir_2026-11-24/README.md">Tirsdag 24-11-2026</a></td>
-  <td>Eksamensprojekt - sprint 1</td>
-  <td></td>
+  <td>ITF- Eksamensprojekt</td>
+  <td>DE</td>
   <td></td>
 </tr>
 <tr>
   <td></td>
-  <td><a href="49/03_ons_2026-11-25/README.md">Onsdag 25-11-2026</a></td>
+  <td><a href="48/03_ons_2026-11-25/README.md">Onsdag 25-11-2026</a></td>
   <td>Eksamensprojekt - statusmøde</td>
-  <td>SIEB/MANY</td>
+  <td>ANIZ</td>
   <td>Online</td>
 </tr>
 <tr>
   <td></td>
-  <td><a href="49/04_tor_2026-11-26/README.md">Torsdag 26-11-2026</a></td>
-  <td>ITF: PO-møde</td>
-  <td></td>
+  <td><a href="48/04_tor_2026-11-26/README.md">Torsdag 26-11-2026</a></td>
+  <td>Projektvejledning</td>
+  <td>BEHU</td>
   <td></td>
 </tr>
 <tr>
   <td></td>
-  <td><a href="49/05_fre_2026-11-27/README.md">Fredag 27-11-2026</a></td>
-  <td>ITF:</td>
-  <td></td>
+  <td><a href="48/05_fre_2026-11-27/README.md">Fredag 27-11-2026</a></td>
+  <td>Projektvejledning</td>
+  <td>JART</td>
   <td></td>
 </tr>
 
@@ -602,14 +605,14 @@
 <tr>
   <td></td>
   <td><a href="49/04_tor_2026-12-03/README.md">Torsdag 03-12-2026</a></td>
-  <td>Eksamensprojekt</td>
-  <td></td>
+  <td>Eksamensprojekt vejledning</td>
+  <td>BEHU</td>
   <td></td>
 </tr>
 <tr>
   <td></td>
   <td><a href="49/05_fre_2026-12-04/README.md">Fredag 04-12-2026</a></td>
-  <td>Eksamensprojekt</td>
+  <td>Eksamensprojekt vejledning</td>
   <td>JART</td>
   <td></td>
 </tr>
@@ -641,7 +644,7 @@
   <td></td>
   <td><a href="50/04_tor_2026-12-10/README.md">Torsdag 10-12-2026</a></td>
   <td>Eksamensprojekt - statusmøde</td>
-  <td></td>
+  <td>BEHU</td>
   <td></td>
 </tr>
 <tr>
