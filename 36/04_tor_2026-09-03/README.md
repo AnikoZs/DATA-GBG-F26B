@@ -1,26 +1,22 @@
-# Java Collections, Map (og unittest repetion)
+# Java Collections, Map
 
-## Underviser: Ian
+## Underviser: Benjamin
+
+
 
 ## Beskrivelse
 
 Vi kigger på de forskellige datatyper i Java Collection Framework, deres egenskaber og anvendelse.
 
-Vi repeterer også unittest.
-
----
-
 
 
 ## Forberedelse
 
-Læs:
+- [LinkedList vs ArrayList in Java Tutorial - Which Should You Use?](https://www.youtube.com/watch?v=5dscMs2hnDI)
+- [Java Set, HashSet and TreeSet (Java Unordered Collections)](https://www.youtube.com/watch?v=mI4eNh5iIpE)
+- [LinkedList vs ArrayList in Java Tutorial - Which Should You Use?](https://www.youtube.com/watch?v=H62Jfv1DJlU)
 
-[Getting to Know the Collection Hierarchy](https://dev.java/learn/api/collections-framework/organization/)
 
-[Using Maps to Store Key Value Pairs](https://dev.java/learn/api/collections-framework/maps/)
-
----
 
 ## Læringsmål
 
@@ -28,12 +24,76 @@ Læs:
 - At kunne udvælge og anvende passende collection typer
 - At kunne forklare og implementere unittest
 
----
+
+
+## Peer instruction
+
+<!--
+
+### Spørgsmål 1
+
+Hvad er værdien for nøglen `"java"` efter koden er kørt?
+
+```
+Map<String, Integer> counts = new HashMap<>();
+
+counts.put("java", 1);
+counts.put("sql", 1);
+counts.put("java", counts.get("java") + 1);
+```
+
+A. `1`
+B. `2`
+C. `[1, 2]`
+D. `null`
+
+
+
+### Spørgsmål 2: Valg af collection
+
+Du skal gemme afleveringer i den rækkefølge, de blev afleveret. Den samme studerende må gerne aflevere flere gange.
+
+Hvilken type passer bedst som udgangspunkt?
+
+A. `List<Submission>`
+B. `Set<Submission>`
+C. `Map<Submission, Submission>`
+D. `Set<Integer>`
+
+
+
+### Spørgsmål 3
+
+Hvad kan vi med sikkerhed sige om værdien af `first`?
+
+```
+Set<String> technologies = new HashSet<>();
+
+technologies.add("Spring");
+technologies.add("Java");
+technologies.add("SQL");
+
+String first = technologies.iterator().next();
+```
+
+A. `first` er altid `"Spring"`
+B. `first` er altid `"Java"`
+C. `first` er altid `"SQL"`
+D. Vi kan ikke vide, hvilket af de tre elementer der kommer først
+
+-->
+
+
+
 ## Indhold
 
-# Data structures
+
+
+### Data structures
 
 Knowing about different ways to store data is crucial when writing software. Right now it might not be that clear because you are working with small amounts of data in your projects. But once you start working with 1000 of objects, maybe even millions of objects then knowing different data structures is absolutely crucial.
+
+
 
 ## Learning objectives
 
@@ -102,6 +162,8 @@ More in depth here: <https://stackoverflow.com/questions/322715/when-to-use-link
 * List of accounts
 * List of numbers
 * The lines of a file
+
+
 
 ## Map
 
@@ -188,6 +250,8 @@ Map<Integer, String> map = new HashMap<Integer, String>();
     map.remove(18);
 ```
 
+
+
 ## Set
 
 `Set` data structures cannot contain duplicates!
@@ -252,9 +316,13 @@ Using the `Set` data structure and the `randomNames1` and `randomNames2` figure 
 * Log out the names that are in the set containing `randomNames1` but not in the set containing the items from`randomNames2`
 * Log out all the names that appear it both sets
 
+
+
 ## Iterating the data structures
 
 Iteration is different for most ADT's (Abstract Data Types) like `List`, `Map`, `Tree`. You can figure out how to iterate by googling: `YOUR_DATA_STRUCTURE iteration` fx `TreeSet iteration`
+
+
 
 ## Which data structure to choose?
 
@@ -292,6 +360,8 @@ What data structure should we choose and why? Write a bit of code (maybe pseudo 
 #### Continued
 
 Storebæltsbroen (the company) owns more bridges and they would like to know how many of the cars has been crossing **all** of the bridges. From each bridge they register the numberplate using the above mentioned system. The system should be **fast**. What data structure can help us achieve this and why? Please write some pseudo code of how you would get how many of the cars has crossed **all** the bridges
+
+
 
 #### Map exercise
 
@@ -335,8 +405,6 @@ For hvert element
 
 
 Måske lav den her tour de france med ai og så skal de reviewe kode og give feedback: https://github.com/EK-DATA-2SEM-PROGSYSTEK/DATA-GBG-E25A-B/blob/main/06/02_tir_2026-02-03/opgave-tour-de-france.md
-
-
 
 
 
