@@ -28,16 +28,23 @@ Se disse videoer om Thymeleaf og forms i [Thymeleaf Tutorial](https://www.youtub
 
 ## Læringsmål
 
-- at kunne anvende HTML forms med Thymeleaf - check
-- at forstå annotationen `@ModelAttribute` - 
-- at kunne håndtere response/redirect i controlleren
+- Kunne anvende HTML forms med Thymeleaf
+- Binde modelobjekter til forms med `th:object` og `th:field`
+- Modtage formdata som objekter med `@ModelAttribute`
+- Behandle forskellige inputtyper
+  - tekstfelter
+  - options
+  - checkbokse
+  - knapper
+- Håndtere redirect efter en `POST` request
 
 
 
 ## Overblik
 
 - Peer instruction
-- Jeg starter med at kode lille projekt
+- Jeg starter med at kode lille projekt ELLER GØR JEG?
+  - Forklar redirect pattern
 - Opgaver
 
 
@@ -65,7 +72,7 @@ There are quite a lot of different request types. We will focus on `GET` and `PO
 
 ### Creating a form
 
-Here is an example of a form
+Here is an example of a standard HTML form
 
 ```html
 <form action="/sign-up" method="POST">
@@ -77,11 +84,11 @@ Here is an example of a form
 </form>
 ```
 
-There are a few things going on. Lets disect it:
+There are a few things going on. Let's dissect it:
 
-`action="https://telmore.dk"` - The `action` attribute decides what url the form data should be send to.
+`action="/sign-up"` - The `action` attribute decides what URL the form data should be sent to.
 
-`method="GET"` - The `method` attribute decides what kind of request to make. When posting we will mostly be using a `POST` request because we are creating a new user.
+`method="POST"` - The `method` attribute decides what kind of request to make. When a form changes or creates data, we will normally use a `POST` request.
 
 `<label for="mobile">Write your mobile</label>` This is a label that is connected to some field. It helps the user figuring out what to put into the connected field. The connection between `label` and field happens with the `for` attribute and the `id` on the field.
 
@@ -131,9 +138,12 @@ Answer these two questions:
 Now we have figured out how to send the `POST` request (with data) to the server using forms. Now we need to figure out how to get that data in our `@controller`
 
 ```java
-@PostMapping(value = "/sign-up")
+@PostMapping("/sign-up")
 @ResponseBody
-public String createNewUser(@RequestParam("name") String name, @RequestParam("mobile") int age) {
+public String createNewUser(
+        @RequestParam("name") String name,
+        @RequestParam("mobile") String mobile) {
+
     return "User created with name: " + name + " and mobile: " + mobile;
 }
 ```
@@ -144,19 +154,19 @@ To get data out of the `POST` request use `@RequestParam("name") String name`. `
 
 
 
-## ModelAttribute
+## Binding a model object to a form
 
-Another way of getting data from a form is to use `@ModelAttribute`.
+When a form represents an object, Thymeleaf can bind the form directly to a Java object.
 
-This is useful when the form data should become an object.
-
-For example, imagine we have a `Student` class:
+We will use a `Student` as an example:
 
 ```java
 public class Student {
     private String name;
     private String email;
     private int age;
+    private String programme;
+    private boolean fullTime;
 
     public Student() {
     }
@@ -190,22 +200,148 @@ public class Student {
     public void setAge(int age) {
         this.age = age;
     }
+
+    public String getProgramme() {
+        return programme;
+    }
+
+    public void setProgramme(String programme) {
+        this.programme = programme;
+    }
+
+    public boolean isFullTime() {
+        return fullTime;
+    }
+
+    public void setFullTime(boolean fullTime) {
+        this.fullTime = fullTime;
+    }
 }
 ```
 
-Then we can create a form like this:
+
+
+### 1. Put the object in the model
+
+Before Thymeleaf can bind the form, the controller needs to put a `Student` object in the model:
+
+```java
+@GetMapping("/create-student")
+public String showCreateStudentForm(Model model) {
+    model.addAttribute("student", new Student());
+    return "create-student";
+}
+```
+
+The name `"student"` is the name we use to refer to this object from the Thymeleaf template.
+
+
+
+### 2. Bind the form to the object
+
+In the HTML template we use `th:object` to bind the whole form to the `Student` object:
 
 ```html
-<form action="/create-student" method="POST">
-    <input type="text" name="name"/>
-    <input type="email" name="email"/>
-    <input type="number" name="age"/>
+<form th:action="@{/create-student}"
+      th:object="${student}"
+      method="post">
+
+    <input type="text" th:field="*{name}" />
+    <input type="email" th:field="*{email}" />
+    <input type="number" th:field="*{age}" />
 
     <button type="submit">Submit</button>
 </form>
 ```
 
-And in our controller we can receive the form data like this:
+`th:action="@{/create-student}"` is Thymeleaf's way of generating the URL for the form action
+
+`th:object="${student}"` means: **this form represents the `student` object**.
+
+`th:field="*{name}"` means: **this field is bound to the `name` property on that object**.
+
+Thymeleaf generates the corresponding `name`, `id` and `value` attributes for us. For example:
+
+```html
+<input type="text" th:field="*{name}" />
+```
+
+will result in HTML similar to:
+
+```html
+<input type="text" id="name" name="name" value="" />
+```
+
+Notice that `th:field="*{name}"` must match a property on the `Student` class. The model attribute name `student` does **not** need to have the same name as the fields.
+
+### Checkboxes and options
+
+`th:field` also works with other form controls. For example, the `Student` class above has these two properties:
+
+```java
+private String programme;
+private boolean fullTime;
+```
+
+We can bind a `<select>` with several `<option>` elements to `programme`:
+
+```html
+<label for="programme">Programme</label>
+<select th:field="*{programme}">
+    <option value="">Choose programme</option>
+    <option value="Datamatiker">Datamatiker</option>
+    <option value="IT-arkitektur">IT-arkitektur</option>
+    <option value="Multimediedesigner">Multimediedesigner</option>
+</select>
+```
+
+When the user selects an option, its `value` becomes the value of `student.programme`.
+
+A checkbox can be bound directly to a `boolean` property:
+
+```html
+<label>
+    <input type="checkbox" th:field="*{fullTime}" />
+    Full-time student
+</label>
+```
+
+If the checkbox is checked, `student.fullTime` becomes `true`. If it is not checked, it becomes `false`.
+
+One advantage of using `th:field` is that Thymeleaf handles details such as `name`, `value`, `checked` and `selected` for the bound field.
+
+The form could therefore contain different kinds of fields that all bind to the same object:
+
+```html
+<form th:action="@{/create-student}"
+      th:object="${student}"
+      method="post">
+
+    <input type="text" th:field="*{name}" />
+    <input type="email" th:field="*{email}" />
+    <input type="number" th:field="*{age}" />
+
+    <select th:field="*{programme}">
+        <option value="">Choose programme</option>
+        <option value="Datamatiker">Datamatiker</option>
+        <option value="IT-arkitektur">IT-arkitektur</option>
+        <option value="Multimediedesigner">Multimediedesigner</option>
+    </select>
+
+    <label>
+        <input type="checkbox" th:field="*{fullTime}" />
+        Full-time student
+    </label>
+
+    <button type="submit">Submit</button>
+</form>
+```
+
+
+
+### 3. Receive the object with `@ModelAttribute`
+
+When the form is submitted, Spring can bind the submitted values back into a `Student` object:
 
 ```java
 @PostMapping("/create-student")
@@ -219,25 +355,11 @@ public String createStudent(
 }
 ```
 
-Here Spring looks at the form data and creates a `Student` object for us.
 
-The important thing is that the `name` attributes in the HTML form must match the fields in the Java class.
 
-```html
-<input type="text" name="name"/>
-<input type="email" name="email"/>
-<input type="number" name="age"/>
-```
+### `@RequestParam` vs `@ModelAttribute`
 
-These match the fields in the `Student` class:
-
-```java
-private String name;
-private String email;
-private int age;
-```
-
-So instead of writing this:
+If we did not bind the data to an object, we could receive each value individually:
 
 ```java
 @PostMapping("/create-student")
@@ -251,7 +373,7 @@ public String createStudent(
 }
 ```
 
-We can write this:
+But when the form represents one object, this is usually simpler:
 
 ```java
 @PostMapping("/create-student")
@@ -263,26 +385,25 @@ public String createStudent(
 }
 ```
 
-So the difference is:
+`@RequestParam` is useful when you only need a few individual values from the request.
 
-`@RequestParam` is good when you only need a few single values from the form.
+`@ModelAttribute` is useful when the form represents an object, for example a `Student`, `User`, `Product` or `Post`.
 
-`@ModelAttribute` is good when the form represents an object, for example a `Student`, `User`, `Product` or `Post`.
 
 
 
 ## Redirect
 
-Some times we are interested in making the user go to another website than the one he put in the url or was directed to. For this we use forwards and redirects
+Sometimes, after handling a request, we want the browser to make a new request to another URL. In Spring MVC we can do this with a redirect.
 
-Using the redirect prefix we can redirect to another page: `redirect:/URL_TO_REDIRECT_TO`
+Using the `redirect:` prefix we can redirect to another URL: `redirect:/URL_TO_REDIRECT_TO`
 
 ```java
 // Redirect with prefix redirect
 @GetMapping("redirect-prefix-test-simple")
 public String redirectViewPrefixSimple() {
     // adding query parameters to the redirected page
-    return new String("redirect:/sign-up");
+    return "redirect:/sign-up";
 }
 ```
 
@@ -320,35 +441,34 @@ The browser now loads the new url found under the `Location` header!
 
 Good youtube video: [https://www.youtube.com/watch?v=DCC7ufuFD2w](https://www.youtube.com/watch?v=DCC7ufuFD2w)
 
-Imagine a user submits a form and reloads the page. Now that form request will be sent twice. Resulting in two database instances.
+Imagine a user submits a form and then refreshes the result of that `POST` request. The browser may submit the form again, which can create duplicate data.
 
-With this new pattern a server receives a request, saves the data (`createProduct`) and then redirects the user to a confirmation page using `GET` not `POST` (`createProductPageSuccess`)
+With the Post/Redirect/Get pattern, the server receives the `POST`, saves the data, and then redirects the browser. The browser follows the redirect with a new `GET` request.
 
 ```java
 @Controller
 public class PostRedirectGet {
-    @GetMapping("create-product")
-    public String createProductPage() {
+
+    @GetMapping("/create-product")
+    public String createProductPage(Model model) {
+        model.addAttribute("product", new Product());
         return "create-new-product";
     }
-  
-    @PostMapping("create-product")
-    public String createProduct(@RequestParam("title") String title, @RequestParam("price") int price, RedirectAttributes attributes) {
-        attributes.addAttribute("title", title);
-        attributes.addAttribute("price", price);
 
-        return "redirect:/create-product-success";
-    }
+    @PostMapping("/create-product")
+    public String createProduct(
+            @ModelAttribute("product") Product product) {
 
-    @GetMapping("create-product-success")
-    @ResponseBody
-    public String createProductPageSuccess(@RequestParam String title, @RequestParam int price) {
-        return "Created product: " + title + " " + price;
+        // Save the product here
+
+        return "redirect:/dashboard";
     }
 }
 ```
 
-Notice how the `POST` parameters are sent to the `create-product-success` using `RedirectAttributes`.
+The important part is that the `POST` handler does its work and then returns a redirect. The browser then makes a new `GET` request to `/dashboard`.
+
+This avoids the browser resubmitting the same `POST` request if the user refreshes the page.
 
 
 
@@ -364,9 +484,21 @@ The site should have these url's:
 
 | Url            | Description                                                  |
 | -------------- | ------------------------------------------------------------ |
-| `/submit`      | Is where a user can create a new social media post using a `form`. Use the `form` you created in the exercise earlier. In the starter there is an example of how to return an html template for a specific route. |
+| `/submit`      | Show a form for creating a social media post. Put a new `Post` object in the model and bind the form using `th:object` and `th:field`. |
 | `/dashboard`   | Return the json for the `titles` of the public social media posts (Thursday we will render these posts using html templates). In the starter example there is an example of how to return json from a list. |
-| `/submit-post` | Where the `@PostMapping` exists. Remember to `redirect` to `/dashboard` |
+| `/submit-post` | Where the `@PostMapping` exists. Receive the submitted post using `@ModelAttribute` and remember to `redirect` to `/dashboard`. |
+
+
+Your solution should therefore contain:
+
+* A `Post` class with fields matching the form data
+* `model.addAttribute("post", new Post())` in the `GET /submit` handler
+* `th:object="${post}"` on the form
+* `th:field="*{...}"` on the form fields
+* A checkbox bound to the public/private property
+* A `<select>` with at least three `<option>` elements for one of your other properties, for example a category
+* `@ModelAttribute("post") Post post` in the `POST /submit-post` handler
+* A redirect to `/dashboard` after the post has been created
 
 This is what a post should include
 
@@ -380,7 +512,7 @@ This is what a post should include
 
 ### Understand the code
 
-Look through the code and make a list of 3 improvements. Implement those improvements
+Look through the code and make a list of 3 improvements. Implement those improvements. **No AI!**
 
 
 
@@ -399,8 +531,3 @@ To give this new social media a bit of edge, add something to the social media p
 Maybe it's a site for dog lovers, so you add Dog name to the post
 
 I would love to see a bit of creativity here :)
-
-
-
-
-

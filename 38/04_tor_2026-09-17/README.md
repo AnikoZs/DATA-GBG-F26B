@@ -200,8 +200,6 @@ Pull requesten må merges, når den er godkendt
 
 
 
-
-
 # Opgave 2
 
 
@@ -403,5 +401,4 @@ Diskutér i gruppen:
 5. Hvornår er Git Flow nyttigt?
 6. Hvornår kan Git Flow være unødigt komplekst?
 7. Hvorfor bør feature branches leve kort tid?
-
 

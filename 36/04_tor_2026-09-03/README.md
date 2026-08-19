@@ -26,6 +26,14 @@ Vi kigger på de forskellige datatyper i Java Collection Framework, deres egensk
 
 
 
+## Overblik
+
+- Peer instruction
+- Forklar ADT
+- Opgaver
+
+
+
 ## Peer instruction
 
 <!--
@@ -97,12 +105,12 @@ Knowing about different ways to store data is crucial when writing software. Rig
 
 ## Learning objectives
 
-* `ArrayList`
-* `Hashmap` - Collisions and extension
+* `List`
+* `Hashmap`
 * `TreeSet`
 * Identify which is best for which use case
 
-![img](https://behu.gitbook.io/kea/~gitbook/image?url=https%3A%2F%2F3537223523-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-MTL1nD8q978tREYfKpA%252Fuploads%252Fgit-blob-8e6fcff9a1af99d22ab11a83883a1ff03c723779%252Fjava-collection-framework.png%3Falt%3Dmedia&width=768&dpr=3&quality=100&sign=6f5f3341&sv=2)
+![Java Collection Framework](assets/java-collection-framework.png)
 
 
 
@@ -116,9 +124,17 @@ List<String> names = new ArrayList<>();
 
 This programming practice is “strongly recommended” because “it gives you the flexibility to change implementations.”
 
+
+
 ## List
 
+![CleanShot-2026-08-18-at-12.35.07](assets/CleanShot-2026-08-18-at-12.35.07.png)
+
+
+
 Array structure where duplicate items are allowed. Get the item through using the index. Can be easily iterated.
+
+
 
 ### Arraylist
 
@@ -138,11 +154,13 @@ A sequence of elements arranged in order of insertion
 * Finding a specific item is slow. Since we need to search through every item in the array to find what we are looking for
 * Deleting an item is slow. Especially if we need to remove an item in the front of the array. That is because for all the items at the index after the deleted item we need to update the index.
 
+
+
 ### LinkedList
 
 Stores items just like `ArrayList` but does it in a different way
 
-![img](https://behu.gitbook.io/kea/~gitbook/image?url=https%3A%2F%2F3537223523-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-MTL1nD8q978tREYfKpA%252Fuploads%252Fgit-blob-f6744fcf2df990b3b23e38e1a631dd1fba40e9c8%252FLinkedlist.png%3Falt%3Dmedia&width=768&dpr=3&quality=100&sign=5e11dcf9&sv=2)
+![LinkedList](assets/linked-list.png)
 
 #### Pros
 
@@ -156,6 +174,8 @@ Stores items just like `ArrayList` but does it in a different way
 Use `LinkedList` if you need to add or remove items in the start of your `List` then use `LinkedList`. BUT getting an item at a index takes `O(n)` time. Huge disadvantage.
 
 More in depth here: <https://stackoverflow.com/questions/322715/when-to-use-linkedlist-over-arraylist-in-java>
+
+
 
 #### Typical `List` usages
 
@@ -229,30 +249,33 @@ More efficient than a `TreeMap`. So if order does not matters to you then use a 
 1. Write the code to declare a Map that associates people's names with their ages. Add mappings for your own name and age, as well as those of a few friends or relatives.
 2. What keys and values are contained in the following map after this code executes?
 
-```
+```java
 Map<Integer, String> map = new HashMap<Integer, String>();
-    map.put(8, "Eight");
-    map.put(41, "Forty-one");
-    map.put(8, "Ocho");
-```
-
-```
-    map.put(18, "Eighteen");
-    map.put(50, "Fifty");
-    map.put(132, "OneThreeTwo");
-    map.put(28, "Twenty-eight");
-    map.put(79, "Seventy-nine");
-    map.remove(41);
-    map.remove(28);
-    map.remove("Eight");
-    map.put(50, "Forty-one");
-    map.put(28, "18");
-    map.remove(18);
+map.put(8, "Eight");
+map.put(41, "Forty-one");
+map.put(8, "Ocho");
+map.put(18, "Eighteen");
+map.put(50, "Fifty");
+map.put(132, "OneThreeTwo");
+map.put(28, "Twenty-eight");
+map.put(79, "Seventy-nine");
+map.remove(41);
+map.remove(28);
+map.remove("Eight");
+map.put(50, "Forty-one");
+map.put(28, "18");
+map.remove(18);
 ```
 
 
 
 ## Set
+
+![Bouncer looking guest list flashlight Stock Photo - Alamy](assets/images.jpeg)
+
+"Er du på listen?"
+
+
 
 `Set` data structures cannot contain duplicates!
 
@@ -318,12 +341,6 @@ Using the `Set` data structure and the `randomNames1` and `randomNames2` figure 
 
 
 
-## Iterating the data structures
-
-Iteration is different for most ADT's (Abstract Data Types) like `List`, `Map`, `Tree`. You can figure out how to iterate by googling: `YOUR_DATA_STRUCTURE iteration` fx `TreeSet iteration`
-
-
-
 ## Which data structure to choose?
 
 ![img](https://behu.gitbook.io/kea/~gitbook/image?url=https%3A%2F%2F3537223523-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-MTL1nD8q978tREYfKpA%252Fuploads%252Fgit-blob-f96ff5e51365eb4de28a7faef37dd1247a36867c%252Fwhich-data-structure.png%3Falt%3Dmedia&width=768&dpr=3&quality=100&sign=386d6ad5&sv=2)
@@ -356,6 +373,8 @@ The information they want to save for a car is the following:
 It is important for Storebæltsbroen that they can **quickly** find information about a particular car (using the numberplate)
 
 What data structure should we choose and why? Write a bit of code (maybe pseudo code) showing how you would save some data for a new car.
+
+
 
 #### Continued
 
