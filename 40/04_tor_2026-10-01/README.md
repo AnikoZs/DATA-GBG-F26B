@@ -41,11 +41,27 @@ og konverteret fra PostgreSQL til MySQL)
 
 ![Movie Catalog ER Diagram](assets/movie_catalog_ER.svg)
 
-[Opgave: ER diagram](opgave_ERD_analyse.pdf)
 
-[Opgave: DDL](opgave_movie_catalog_ddl.pdf)
 
----
+**Opgave: Movie Catalog ER diagram**
+
+Opgaven skal gennemføres parvis.
+
+1. Brug 5 minutter alene på at studere ER-diagrammet. Overvej, hvad entiteterne repræsenterer og hvilke kardinaliteter (1:N, M:N) der er mellem dem.
+
+2. Forklar for hinanden, hvad de forskellige entiteter repræsenterer, og hvorfor de har den kardinalitet, de har. Læg især mærke til entiteterne genre, movie_genre og movie samt person, movie_person, role_type og movie.
+
+
+
+**Opgave: Movie Catalog DDL**
+
+Opgaven skal gennemføres parvis.
+
+1. Åbn filen movie_catalog_schema.sql (i assets mappen) I MySQL Workbench. Skiftevis vælg en
+
+CREATE TABLE statement og forklar implementeringen til hinanden
+
+
 
 ## Joins
 
@@ -145,7 +161,7 @@ ON movie.movie_id = movie_person.movie_id;
 
 ---
 
-[Opgave: Joins](opgave_movie_catalog_joins.pdf)
+[Opgave: Joins kun 1 + 2!](opgave_movie_catalog_joins.pdf)
 
 ---
 
@@ -203,7 +219,7 @@ Hver column i SELECT skal enten:
 
 ---
 
-[Opgave: GROUP BY, HAVING](opgave_movie_catalog_group_by.pdf)
+[Opgave: GROUP BY, HAVING opgave 1](opgave_movie_catalog_group_by.pdf)
 
 ---
 
@@ -225,5 +241,24 @@ WHERE r.rating_value > (
 );
 ```
 
----
+
+
+## Generativ AI opgave - i par
+
+Vælg ét af følgende spørgsmål – eller formulér et tilsvarende spørgsmål selv:
+
+- Hvilke instruktører laver de bedst vurderede movies?
+- Hvilke personer har størst betydning i movie catalog-databasen?
+- Hvilke movies fortjener mere opmærksomhed?
+- Hvilke instruktører er mest konsistente?
+- Hvilke personer har bidraget til flest movies, og hvordan vil I måle deres bidrag?
+
+
+
+Derefter:
+
+1. Få to forskellige modeller til at skrive sql'en til et af spørgsmålene ovenfor
+   1. Tænk over prompting og kontekst
+2. Gå svarene igennem. Forstår i det? Prøv at forklar teknisk hvordan sql'en virker. Sammenlign de to forskellige svar. Hvor er der forskelle og ligheder
+3. Lav den endelige sql til at svare på spørgsmål og argumenter for hvorfor netop den sql sætning
 
