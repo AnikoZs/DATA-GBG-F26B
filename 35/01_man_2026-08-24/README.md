@@ -1,5 +1,5 @@
 # Introduktion til 2. semester og Spring Boot
-## Underviser: Signe
+## Underviser: Aniko
 ## Beskrivelse
 ### Semestret – praktisk info
 Vi går igennem semesterplanen, de obligatoriske opgaver, kravene til eksamen og hvad I ellers måtte have af spørgsmål til 2. semester.
