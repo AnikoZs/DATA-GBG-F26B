@@ -1,5 +1,5 @@
 # Spring Boot & Turistguide 1
-## Underviser: Aniko
+## Underviser: Anikó
 
 ## Beskrivelse
 
