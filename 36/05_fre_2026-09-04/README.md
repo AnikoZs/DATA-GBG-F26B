@@ -1,6 +1,6 @@
 # Feedback Turistguide 1
 
-## Underviser: Signe
+## Underviser: Jarl
 
 ## Beskrivelse
 
