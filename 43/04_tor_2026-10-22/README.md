@@ -3,28 +3,41 @@
 ## Beskrivelse
 I dag skal vi se på, hvordan man bruger H2 databasen til integrationstest
 
+
+
 ## Forberedelse
+
 Se denne video:  
 [Spring Boot H2 Embedded Database Example - Java Junit Test H2 Database Tutorial](https://www.youtube.com/watch?v=ixIxXRoCr5w)  
 Videoen er ikke helt up-to-date, men giver et god introduktion - inklusiv en naturoplevelse :smiley:
 
 
+
 ## Læringsmål
+
 - at kunne forklare fordele ved at benytte H2 til test formål
 - at kunne opsætte et testmiljø i Spring boot med anvendelse af H2
 
+
+
 ## Indhold
+
 ### Hvad er H2?
-H2 er en lille, hurtig, Java-baseret relationel database, der kan køre in-memory (eller som fil) inde i din JVM-proces. Det gør den ideel til hurtige, integrationstests uden ekstern opsætning.  
+H2 er en lille, hurtig, Java-baseret relationel database, der kan køre in-memory (eller som fil) inde i din JVM-proces. Det gør den ideel til hurtige, integrationstests uden ekstern opsætning.
 Fordele ved at benytte H2 i tests:
+
 - Lynhurtig opstart og nedlukning
 - Ren database ved hvert test-run
 - Ingen lokal serverdatabase at installere/vedligeholde
 - Kompatibel med JDBC API (men der er små forskelle i sql syntaks ift f.eks. MySql, se [MySQL vs H2](https://www.geeksforgeeks.org/blogs/mysql-vs-h2/))
   
+
 Vi bruger kun H2 i tests. Produktion/dev skal fortsat køre på den “rigtige” DB (fx MySQL).
 
+
+
 ### H2 dependency i pom.xml
+
 H2 databasen benyttes ved at inkludere denne dependency i pom.xml 
 
 ```xml
@@ -40,7 +53,10 @@ Der oprettes automatisk en database ´testdb’ med username = sa og password = 
 
 Eksempelprojekt: [person_h2](https://github.com/EK-DATA-2SEM-PROGSYSTEK/person_h2)
 
+
+
 ### application-test.properties
+
 Vi laver en selvstændig apllication-test.properties i test miljøet, der indeholde opsætningsparametre for H2 databasen.  
 Filen placeres i /test/resources mappen
 
@@ -60,6 +76,8 @@ Denne parameter betyder, at databasen ikke lukkes automatisk, selvom den sidste 
 Denne parameter sikrer, at databasen ikke lukker, når JVM'en (Java Virtual Machine) afsluttes.  
 
 I et testmiljø bruges disse parametre for at sikre, at den indlejrede H2-database forbliver tilgængelig og i en kendt tilstand gennem hele test-livscyklussen, især når man kører en suite af integrationstests.  
+
+
 ### Test klasse
 
 Test klassen placeres i mappen /test/java/com/example/person_h2
@@ -113,7 +131,10 @@ Disse tre annotations bruges ofte sammen til at skabe et robust og pålideligt i
 - @ActiveProfiles("test") sikrer, at den starter med en konfiguration, der er skræddersyet til tests (f.eks. en in-memory database).
 - @Sql klargør databasen ved at køre et script, der opretter skema og indsætter testdata, så testen kan udføres mod et kendt datasæt.
 
+
+
 ## h2init.sql
+
 Sql initialiseringsfilen placeres i /test/resources mappen.
 ```sql
 DROP TABLE IF EXISTS person;
@@ -130,7 +151,10 @@ CREATE TABLE person (
 INSERT INTO person (id, name, email) VALUES (1, 'Alice', 'alice@example.com');
 INSERT INTO person (id, name, email) VALUES (2, 'Bob',   'bob@example.com');
 ```
+
+
 ### Mappestruktur for testmiljø
+
 ```text
 
     ─ test/
@@ -145,6 +169,8 @@ INSERT INTO person (id, name, email) VALUES (2, 'Bob',   'bob@example.com');
          └─ h2init.sql                               # DDL + init-data (køres før hver test via @Sql)
 ```
 
+
+
 ## Aktiviteter
 
 - Fork projektet [person_h2](https://github.com/EK-DATA-2SEM-PROGSYSTEK/person_h2)    
@@ -152,3 +178,25 @@ INSERT INTO person (id, name, email) VALUES (2, 'Bob',   'bob@example.com');
 - Afprøv test lokalt og observér detailbeskeder i log vindue  
 - Opret en CI pipeline lokalt i en .yml fil i .github/workflows
 - Push til Github og observér afviling af job
+
+
+
+
+
+<!--
+
+## Learning
+
+
+
+Lokal embedded database man laver i memory til testing. 
+
+1. Load data. 
+2. Run tests. 
+3. Shutdown, called teardown
+
+
+
+
+
+-->

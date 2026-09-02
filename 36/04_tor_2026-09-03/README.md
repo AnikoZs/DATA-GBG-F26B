@@ -30,7 +30,10 @@ Vi kigger på de forskellige datatyper i Java Collection Framework, deres egensk
 
 - Peer instruction
 - Forklar ADT
+- [https://chatgpt.com/share/6a97df65-fca8-83eb-a837-2be189682cc9](https://chatgpt.com/share/6a97df65-fca8-83eb-a837-2be189682cc9)
+- [https://enmilliardpizzaer.dk/](https://enmilliardpizzaer.dk/)
 - Opgaver
+- vi mødes kl 11:30 hvor jeg vil reviewe noget AI slop kode
 
 
 
@@ -55,6 +58,8 @@ B. `2`
 C. `[1, 2]`
 D. `null`
 
+E. None of the above
+
 
 
 ### Spørgsmål 2: Valg af collection
@@ -72,22 +77,22 @@ D. `Set<Integer>`
 
 ### Spørgsmål 3
 
-Hvad kan vi med sikkerhed sige om værdien af `first`?
+Du skal gemme navnene på studerende, der har afleveret en opgave.
+
+Kravene er:
+
+- En studerende skal kun optræde én gang.
+- Rækkefølgen er ligegyldig.
+- Du skal hurtigt kunne undersøge, om `"Benjamin"` har afleveret.
+
+Hvad er det bedste valg?
 
 ```
-Set<String> technologies = new HashSet<>();
-
-technologies.add("Spring");
-technologies.add("Java");
-technologies.add("SQL");
-
-String first = technologies.iterator().next();
+A. ArrayList<String>
+B. LinkedList<String>
+C. HashSet<String>
+D. HashMap<String, String>
 ```
-
-A. `first` er altid `"Spring"`
-B. `first` er altid `"Java"`
-C. `first` er altid `"SQL"`
-D. Vi kan ikke vide, hvilket af de tre elementer der kommer først
 
 -->
 
@@ -129,8 +134,6 @@ This programming practice is “strongly recommended” because “it gives you 
 ## List
 
 ![CleanShot-2026-08-18-at-12.35.07](assets/CleanShot-2026-08-18-at-12.35.07.png)
-
-
 
 Array structure where duplicate items are allowed. Get the item through using the index. Can be easily iterated.
 
@@ -244,10 +247,12 @@ A `HashMap` where the keys are sorted.
 
 More efficient than a `TreeMap`. So if order does not matters to you then use a `HashMap`.
 
+
+
 ### HashMap exercises - 30 min
 
 1. Write the code to declare a Map that associates people's names with their ages. Add mappings for your own name and age, as well as those of a few friends or relatives.
-2. What keys and values are contained in the following map after this code executes?
+2. Paper exercise. No Editor! What keys and values are contained in the following map after this code executes? 
 
 ```java
 Map<Integer, String> map = new HashMap<Integer, String>();
@@ -280,14 +285,16 @@ map.remove(18);
 `Set` data structures cannot contain duplicates!
 
 ```java
-Set<String> stooges = new TreeSet<String>();
-stooges.add("Larry");
-stooges.add("Moe");
-stooges.add("Curly");
-stooges.add("Moe"); // duplicate, won't be added
-stooges.add("Shemp");
-stooges.add("Moe"); // duplicate, won't be added
+Set<String> bouncerList = new HashSet<String>();
+stooges.add("Per");
+stooges.add("Anne");
+stooges.add("Freja");
+stooges.add("Per"); // duplicate, won't be added
+stooges.add("Mads");
+stooges.add("Freja"); // duplicate, won't be added
 ```
+
+
 
 #### Set operations
 
@@ -300,7 +307,9 @@ stooges.add("Moe"); // duplicate, won't be added
 
 ![img](https://behu.gitbook.io/kea/~gitbook/image?url=https%3A%2F%2F3537223523-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-MTL1nD8q978tREYfKpA%252Fuploads%252Fgit-blob-616cea31ce35f4c19115a33a7b92fe674a8ac9da%252Ftreeset.png%3Falt%3Dmedia&width=768&dpr=3&quality=100&sign=4ca8c527&sv=2)
 
-*Make an example with some sets of names*
+Hvem er på listen på Klub A og Klub B?
+
+
 
 #### Pros
 
@@ -313,6 +322,8 @@ stooges.add("Moe"); // duplicate, won't be added
 
 * Cannot loop over using index (must use iterator)
 * Does not have indexes
+
+
 
 #### Typical `Set` usages
 
@@ -328,6 +339,8 @@ The list is sorted when the you add items! Adding items is a bit slower compared
 The list is not sorted when the you add items! Meaning adding items is quicker but sorting the list will be slow.
 
 There are [other differences](https://stackoverflow.com/questions/25602382/java-hashset-vs-treeset-when-should-i-use-over-the-other) between `HashSet` and `TreeSet`
+
+
 
 ### Set exercises - 30 min
 
@@ -382,6 +395,8 @@ Storebæltsbroen (the company) owns more bridges and they would like to know how
 
 
 
+<!--
+
 #### Map exercise
 
 Using this boilerplate: <https://github.com/behu-kea/data-structure-exercise-boilerplate>
@@ -421,9 +436,24 @@ For hvert element
  		map.put.(element, antal) 
 ```
 
+-->
 
 
-Måske lav den her tour de france med ai og så skal de reviewe kode og give feedback: https://github.com/EK-DATA-2SEM-PROGSYSTEK/DATA-GBG-E25A-B/blob/main/06/02_tir_2026-02-03/opgave-tour-de-france.md
+
+## AI genereret projekt
+
+I jeres gruppe få AI til at lave en løsning til det her projekt: [https://github.com/EK-DATA-2SEM-PROGSYSTEK/DATA-GBG-E25A-B/blob/main/06/02_tir_2026-02-03/opgave-tour-de-france.md](https://github.com/EK-DATA-2SEM-PROGSYSTEK/DATA-GBG-E25A-B/blob/main/06/02_tir_2026-02-03/opgave-tour-de-france.md)
+
+
+
+Review det genererede kode. Lav en liste over ting der kan forbedres eller opfølgende spørgsmål til kodebasen. Hav øje på de følgende ting:
+
+- Forstår i havd koden gør? 
+- Er det blevet overengineered? Er det simplificeret?
+- Er den rigtige datastruktur blevet brugt?
+- Hvordan er arkitekturen i koden og er det en fornuftig arkitektur til at løse problemet?
+
+
 
 
 

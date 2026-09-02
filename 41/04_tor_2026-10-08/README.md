@@ -315,3 +315,39 @@ Service lag:
 [Opgave: Transactions with Spring Boot](opgave_transaction_springboot.md)
 
 
+
+
+
+<!--
+
+
+
+## Learning
+
+
+
+### Lost update scenario
+
+Når to brugere skrive til den samme tabel
+
+
+
+### Dirty read
+
+A user reads a value where a transaction is happening. 
+
+
+
+### Nonrepeatable reads
+
+Two reads of the same data comes back with different results
+
+
+
+### Phantom read
+
+Two reads of the same table returns different rows
+
+
+
+-->
