@@ -28,10 +28,10 @@ Vi kigger på de forskellige datatyper i Java Collection Framework, deres egensk
 
 ## Overblik
 
-- Peer instruction
-- Forklar ADT
 - [https://chatgpt.com/share/6a97df65-fca8-83eb-a837-2be189682cc9](https://chatgpt.com/share/6a97df65-fca8-83eb-a837-2be189682cc9)
 - [https://enmilliardpizzaer.dk/](https://enmilliardpizzaer.dk/)
+- Peer instruction
+- Forklar ADT
 - Opgaver
 - vi mødes kl 11:30 hvor jeg vil reviewe noget AI slop kode
 
@@ -334,7 +334,7 @@ Hvem er på listen på Klub A og Klub B?
 
 The list is sorted when the you add items! Adding items is a bit slower compared to `HashSet`. If you need a sorted list choose `TreeSet` otherwise choose `HashSet`
 
-### Hashset
+### HashSet
 
 The list is not sorted when the you add items! Meaning adding items is quicker but sorting the list will be slow.
 
