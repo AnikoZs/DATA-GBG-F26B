@@ -1,6 +1,6 @@
 # Introduktion til Thymeleaf
 
-## Underviser: Signe
+## Underviser: Aniko
 
 ## Beskrivelse
 
