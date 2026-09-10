@@ -49,7 +49,8 @@ Se disse videoer om Thymeleaf og forms i [Thymeleaf Tutorial](https://www.youtub
 - Recap
 - [https://chatgpt.com/share/6aa2582e-9004-83eb-ba20-18b7f9691138](https://chatgpt.com/share/6aa2582e-9004-83eb-ba20-18b7f9691138)
 - Forklar redirect pattern
-- Vi mødes 11:30 og ser et socialt medie. Jeg prikker jer på skulderen
+- ![Post/Redirect/Get (PRG) Pattern - Seobility Wiki](assets/Post-Redirect-Get.png)
+- Vi mødes 15:30 og ser et socialt medie. Jeg prikker jer på skulderen
 - Opgaver
 
 
