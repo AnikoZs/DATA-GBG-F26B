@@ -42,9 +42,11 @@ Se disse videoer om Thymeleaf og forms i [Thymeleaf Tutorial](https://www.youtub
 
 ## Overblik
 
-- Peer instruction
-- Jeg starter med at kode lille projekt ELLER GØR JEG?
-  - Forklar redirect pattern
+- Jeg blev gift i weekenden 🎉
+- ![IMG_7072](assets/IMG_7072.jpeg)
+- [https://chatgpt.com/share/6aa2582e-9004-83eb-ba20-18b7f9691138](https://chatgpt.com/share/6aa2582e-9004-83eb-ba20-18b7f9691138)
+- Forklar redirect pattern
+- Vi mødes 11:30 og ser et socialt medie. Jeg prikker jer på skulderen
 - Opgaver
 
 
@@ -119,15 +121,6 @@ Answer these two questions:
 * What if i wanted a `placeholder` for my input?
 
 
-
-**Testing that your form works!**
-
-* Go to that website that visualizes your request: <https://webhook.site>
-* Where it says **Your unique URL** copy the url and put that url into the `action` attribute in the `form` you have created.
-* Now when you submit the form, you should be able to see the request coming in on the <https://webhook.site>.
-* In the bottom where it says `Raw Content` you should be able to see the data you sent (You should see title, content, date and public/private)
-
-![img](https://behu.gitbook.io/kea/~gitbook/image?url=https%3A%2F%2F3537223523-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-MTL1nD8q978tREYfKpA%252Fuploads%252Fgit-blob-cb21378482eb647acf40f71dd5a972bcce03ede9%252Fpost-test.png%3Falt%3Dmedia&width=768&dpr=3&quality=100&sign=6d09382a&sv=2)
 
 
 
@@ -258,7 +251,7 @@ In the HTML template we use `th:object` to bind the whole form to the `Student` 
 
 `th:object="${student}"` means: **this form represents the `student` object**.
 
-`th:field="*{name}"` means: **this field is bound to the `name` property on that object**.
+`th:field="*{name}"` means: **this field is bound to the `name` property on that object**. 
 
 Thymeleaf generates the corresponding `name`, `id` and `value` attributes for us. For example:
 
@@ -273,6 +266,8 @@ will result in HTML similar to:
 ```
 
 Notice that `th:field="*{name}"` must match a property on the `Student` class. The model attribute name `student` does **not** need to have the same name as the fields.
+
+
 
 ### Checkboxes and options
 
@@ -474,31 +469,29 @@ This avoids the browser resubmitting the same `POST` request if the user refresh
 
 ## Exercise time 🎉 in groups of 2-3
 
-With AI create the following site: 
-
-We would like to create a new social media site!
+We would like to create a new social media site
 
 Therefore create a website where users can create a new social media post and see a list of all posts that were created. 
 
 The site should have these url's:
 
-| Url            | Description                                                  |
-| -------------- | ------------------------------------------------------------ |
-| `/submit`      | Show a form for creating a social media post. Put a new `Post` object in the model and bind the form using `th:object` and `th:field`. |
-| `/dashboard`   | Return the json for the `titles` of the public social media posts (Thursday we will render these posts using html templates). In the starter example there is an example of how to return json from a list. |
-| `/submit-post` | Where the `@PostMapping` exists. Receive the submitted post using `@ModelAttribute` and remember to `redirect` to `/dashboard`. |
+| Url             | Description                                                  |
+| --------------- | ------------------------------------------------------------ |
+| `/`             | Show a list of posts. There should also be a link for creating a new post |
+| `/create`       | Show a form for creating a social media post.                |
+| `/post-created` | Link that shows a confirmation of the post that was just created |
 
 
 Your solution should therefore contain:
 
 * A `Post` class with fields matching the form data
-* `model.addAttribute("post", new Post())` in the `GET /submit` handler
 * `th:object="${post}"` on the form
 * `th:field="*{...}"` on the form fields
-* A checkbox bound to the public/private property
 * A `<select>` with at least three `<option>` elements for one of your other properties, for example a category
 * `@ModelAttribute("post") Post post` in the `POST /submit-post` handler
 * A redirect to `/dashboard` after the post has been created
+
+
 
 This is what a post should include
 
@@ -510,24 +503,14 @@ This is what a post should include
 
 
 
-### Understand the code
-
-Look through the code and make a list of 3 improvements. Implement those improvements. **No AI!**
-
-
-
-### Extra feature
-
-Now **without** AI you need to add a new feature! 
-
-Every post should have the possibility to add comments. Create a plan for how you can implement this and implement it.
-
-
-
 ### Extra features
 
-To give this new social media a bit of edge, add something to the social media post.
+- Create a comment
+- Like a post or add an emoji to a post
 
-Maybe it's a site for dog lovers, so you add Dog name to the post
 
-I would love to see a bit of creativity here :)
+
+## Arbejd videre på Turistguide 2
+
+
+
