@@ -249,21 +249,22 @@
   <td></td>
 </tr>
 
-
 <tr>
   <td></td>
-  <td><a href="40/04_tor_2026-10-01/README.md">Torsdag 01-10-2026</a></td>
-  <td>SQL joins</td>
-  <td>BEHU</td>
+  <td><a href="40/05_fre_2026-10-02/README.md">Torsdag 01-10-2026</a></td>
+  <td>E/R model og relationel model</td>
+  <td>JART</td>
   <td></td>
 </tr>
 
 <tr>
+
+<td></td>
+  <td><a href="40/04_tor_2026-10-01/README.md">Fredag 02-10-2026</a></td>
+  <td>SQL joins</td>
+  <td>BEHU</td>
   <td></td>
-  <td><a href="40/05_fre_2026-10-02/README.md">Fredag 02-10-2026</a></td>
-  <td>E/R model og relationel model</td>
-  <td>JART</td>
-  <td></td>
+
 </tr>
 
 <!-- UGE 41 -->
