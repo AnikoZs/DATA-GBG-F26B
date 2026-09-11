@@ -561,14 +561,14 @@
   <td></td>
   <td><a href="48/03_ons_2026-11-25/README.md">Onsdag 25-11-2026</a></td>
   <td>Eksamensprojekt - statusmøde</td>
-  <td>ANIZ</td>
+  <td>BEHU</td>
   <td>Online</td>
 </tr>
 <tr>
   <td></td>
   <td><a href="48/04_tor_2026-11-26/README.md">Torsdag 26-11-2026</a></td>
   <td>Projektvejledning</td>
-  <td>BEHU</td>
+  <td>ANIZ</td>
   <td></td>
 </tr>
 <tr>
