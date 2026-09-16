@@ -15,6 +15,7 @@ kunne reviewe og diskutere de nye ændringer, før de integreres ind i main bran
 
 ## Læringsmål
 
+- GitFlow
 - At kunne anvende GitHub flow workflow.
 - At kunne anvende pull requests i Github til kodereviews.
 
@@ -77,7 +78,7 @@ A. Arbejd direkte på `main`.
 
 I skal gennemføre hele pull-request-flowet i en lille opgave.
 
-Arbejd i grupper på mellem 2 og 3.
+Arbejd i grupper
 
 
 
@@ -96,8 +97,8 @@ hobbies.md
 ```
 # Gruppens hobbyer
 
-- [Martin](MartinHobbies.md)
-- [Benjamin](benjaminHobbies.md)
+- [Martin](Martin-hobbies.md)
+- [Benjamin](benjamin-hobbies.md)
 ```
 
 
@@ -108,7 +109,7 @@ Hvert gruppemedlem skal:
 
 1. Klone repositoryet.
 2. Oprette sin egen branch.
-3. Oprette en personlig Markdown-fil med ders hobbyer. Fx `benjaminHobbies.md`
+3. Oprette en personlig Markdown-fil med ders hobbyer. Fx `benjamin-hobbies.md`
 4. Tilføje et link til filen i `hobbies.md`.
 5. Committe ændringen.
 6. Pushe branchen.
@@ -116,29 +117,7 @@ Hvert gruppemedlem skal:
 
 
 
-Filen skal mindst indeholde:
-
-```
-# Martins hobbyer
-
-## Badminton
-
-Jeg spiller badminton, fordi ...
-
-## Madlavning
-
-Jeg kan godt lide at ...
-
-## Udstyr
-
-- Ketcher
-- Træningssko
-- Drikkedunk
-```
-
-
-
-Krav:
+Krav til PR:
 
 - én `h1`;
 - mindst to `h2`;
@@ -147,7 +126,7 @@ Krav:
 Tilføj linket i `hobbies.md`:
 
 ```
-- [Martin](MartinHobbies.md)
+- [Martin](Martin-hobbies.md)
 ```
 
 
@@ -181,8 +160,7 @@ Et andet gruppemedlem kontrollerer:
 
 Revieweren skriver:
 
-- mindst én konkret positiv kommentar;
-- mindst ét spørgsmål eller forbedringsforslag.
+- mindst én konkret kommentar;
 
 
 
@@ -206,7 +184,7 @@ Pull requesten må merges, når den er godkendt
 
 ## Formål
 
-I skal anvende et forenklet Git Flow i en realistisk programmeringsopgave. Arbejd i grupper af 2 eller 3
+I skal anvende et forenklet Git Flow i jeres turistguide projekt. 
 
 I arbejder med tre typer branches:
 
@@ -226,13 +204,13 @@ I skal ikke udvikle direkte på `main` eller `develop`!
 
 ## Forbered repositoryet
 
-Opret `main` og `develop` branches inden i går igang med at kode! Sørg for alle gruppemedlemmer kan har de branches lokalt
+Opret `main` og `develop` branches inden i går igang med at kode! Sørg for alle gruppemedlemmer har de branches lokalt
 
 
 
 ## Vælg en lille feature
 
-Brug Turistguide-projektet eller et andet fælles Spring Boot-projekt.
+Brug Turistguide-projektet
 
 Hvert gruppe medlem vælger én lille feature, eksempelvis: Featuren skal være lille nok til at kunne implementeres, testes og reviewes i undervisningstiden.
 
@@ -310,6 +288,8 @@ Revieweren undersøger:
 - mangler der tests?
 - er relevante fejltilfælde håndteret?
 - kan eksisterende funktionalitet være blevet ødelagt?
+
+
 
 Revieweren skal skrive:
 
