@@ -31,19 +31,19 @@ Sørg for at kunne forklare koden i projektet og vise funktionaliteten.
 
 ## Tidsplan
 
-| Tid   | Gruppe                                    |
-|-------|-------------------------------------------|
-| 08:30 | Gruppe 1: Jeppe, Valdemar, Nicklas C. Mikkel  |
-| 08:50 | Gruppe 2: Mathias, Sebastian, Rasmus, Oliver      |
-| 09:10 | Gruppe 3: Isak, Villa, Nick V., Patrick |
-| 09:30 | Gruppe 4: Bushra, Aisha D., Aisha A.   |
-| 09:50 | Gruppe 5: Demi, Dursun, Yagmur, Hasan    |
-| 10:10 | Gruppe 6: Sveinur, Simon M., Linus, August              |
+| Tid   | Gruppe                                           |
+|-------|--------------------------------------------------|
+| 08:30 | Gruppe 1: Jeppe, Valdemar, Nicklas C. Mikkel     |
+| 08:50 | Gruppe 2: Mathias, Sebastian, Rasmus, Oliver     |
+| 09:10 | Gruppe 3: Isak, Villa, Nick V., Patrick          |
+| 09:30 | Gruppe 4: Bushra, Aisha D., Aisha A.             |
+| 09:50 | Gruppe 5: Demi, Dursun, Yagmur, Hasan            |
+| 10:10 | Gruppe 6: Sveinur, Simon M., Linus, August       |
 | 10:30 | Gruppe 7: Amanda, Sejr, Dan, Morten              |
-| 10:50 | Gruppe 8: Celine, Jenny, Kwan, Nadir              |
-| 11:10 | Gruppe 10: William, Marcus, Ousman              |
-| 11:30 | Gruppe 11: Iddi, Simon B., Wail, Mustafa, Rawand              |
-| 11:50 | Gruppe 12: David, Benjamin, Jarl, Aniko              |
+| 10:50 | Gruppe 8: Celine, Jenny, Kwan, Nadir             |
+| 11:10 | Gruppe 10: William, Marcus, Ousman, Osama        |
+| 11:30 | Gruppe 11: Iddi, Simon B., Wail, Mustafa, Rawand |
+| 11:50 | Gruppe 12: David, Benjamin, Jarl, Aniko          |
 
 
 ---
