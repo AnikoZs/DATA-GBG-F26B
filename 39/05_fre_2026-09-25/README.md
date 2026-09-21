@@ -38,7 +38,7 @@ Sørg for at kunne forklare koden i projektet og vise funktionaliteten.
 | 09:10 | Gruppe 3: Isak, Villa, Nick V., Patrick          |
 | 09:30 | Gruppe 4: Bushra, Aisha D., Aisha A.             |
 | 09:50 | Gruppe 5: Demi, Dursun, Yagmur, Hasan            |
-| 10:10 | Gruppe 6: Sveinur, Simon M., Linus, August       |
+| 10:10 | Gruppe 6: Sveinur, Simon M., August              |
 | 10:30 | Gruppe 7: Amanda, Sejr, Dan, Morten              |
 | 10:50 | Gruppe 8: Celine, Jenny, Kwan, Nadir             |
 | 11:10 | Gruppe 10: William, Marcus, Ousman, Osama        |
