@@ -29,29 +29,21 @@ Sørg for at kunne forklare koden i projektet og vise funktionaliteten.
 
 ## Indhold
 
-## Tidsplan Hold A
+## Tidsplan
 
 | Tid   | Gruppe                                    |
 |-------|-------------------------------------------|
-| 08:30 | Gruppe 1: Lucas, Gustav, Malthe, Mubarak  |
-| 08:50 | Gruppe 2: Tor, Timothy, Kasper, Adan      |
-| 09:10 | Gruppe 3: August, Andreas, Daniella, Mads |
-| 09:30 | Gruppe 4: Emil, Joakim, Chibuike, Simon   |
-| 10:00 | Gruppe 5: Sala, Daniel, Markus, Oliver    |
-| 10:20 | Gruppe 6: Jona, Haifa, Nadya              |
-| 10:40 | Gruppe 7: Niels, Mhad, Abbas              |
-
-## Tidsplan Hold B
-
-| Tid   | Gruppe                                        |
-|-------|-----------------------------------------------|
-| 12:30 | Gruppe 1: Oswald, Zander, Marcus, Nikolaj     |
-| 12:50 | Gruppe 2: Adbul, Magnus, Tamir, Nicklas       |
-| 13:10 | Gruppe 3: Alexander, Frederick, David, Tobias |
-| 13:30 | Gruppe 4: Erik, David, Julie, Johan           |
-| 14:10 | Gruppe 5: Anne-Sophie, Namirah, Isobel        |
-| 14:30 | Gruppe 6: Andreas, Agah, Hector, Reza         |
-| 14:50 | Gruppe 7: Christian, hind, Kristian, Lauritz  |
+| 08:30 | Gruppe 1: Jeppe, Valdemar, Nicklas C. Mikkel  |
+| 08:50 | Gruppe 2: Mathias, Sebastian, Rasmus, Oliver      |
+| 09:10 | Gruppe 3: Isak, Villa, Nick V., Patrick |
+| 09:30 | Gruppe 4: Bushra, Aisha D., Aisha A.   |
+| 09:50 | Gruppe 5: Demi, Dursun, Yagmur, Hasan    |
+| 10:10 | Gruppe 6: Sveinur, Simon M., Linus, August              |
+| 10:30 | Gruppe 7: Amanda, Sejr, Dan, Morten              |
+| 10:50 | Gruppe 8: Celine, Jenny, Kwan, Nadir              |
+| 11:10 | Gruppe 10: William, Marcus, Ousman              |
+| 11:30 | Gruppe 11: Iddi, Simon B., Wail, Mustafa, Rawand              |
+| 11:50 | Gruppe 12: David, Benjamin, Jarl, Aniko              |
 
 
 ---
