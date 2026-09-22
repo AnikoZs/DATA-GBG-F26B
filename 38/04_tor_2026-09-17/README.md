@@ -1,6 +1,7 @@
 # Kode review med pull requests
 
 
+
 ## Underviser: Benjamin
 
 
@@ -58,7 +59,8 @@ D. Hele projektets Git-historik bliver erstattet af historikken fra pull request
 En udvikler skal implementere login-funktionalitet. Hvilken passer bedst?
 
 A. Arbejd direkte på `main`.
- B. Lav en `feature/login` fra `develop`, merge tilbage til `develop` via Pull Request, og senere bliver `develop` releaset til `main`.
+B. Lav en `feature/login` fra `develop`, merge tilbage til `develop` via Pull Request, 
+     og senere bliver `develop` releaset til `main`.
  C. Lav en `hotfix/login` fra `main`.
  D. Lav alle commits direkte på `develop`.
 
