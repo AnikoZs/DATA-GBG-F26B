@@ -1,5 +1,4 @@
-# FeedBack og review af Turistguide 2 - Online i Teams kanalen
-
+# FeedBack og review af Turistguide 2 - Fysisk i klassen
 ---
 
 ## Beskrivelse
