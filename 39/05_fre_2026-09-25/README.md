@@ -42,8 +42,7 @@ Sørg for at kunne forklare koden i projektet og vise funktionaliteten.
 | 10:50 | Gruppe 8: Celine, Jenny, Kwan, Nadir             |
 | 11:10 | Gruppe 10: William, Marcus, Ousman, Osama        |
 | 11:30 | Gruppe 11: Iddi, Simon B., Wail, Mustafa, Rawand |
-| 11:50 | Gruppe 12: David, Benjamin, Jarl, Aniko          |
-
+| 11:45 | Gruppe T.G.I.F: Katy, Perry                      |
 
 ---
 
