@@ -217,7 +217,7 @@
   <td><a href="39/05_fre_2026-09-25/README.md">Fredag 25-09-2026</a></td>
   <td>Feedback og review af Turistguide 2</td>
   <td>JART</td>
-  <td>Online</td>
+  <td>FYSISK i KLASSEN</td>
 </tr>
 
 <!-- UGE 40 -->
