@@ -22,7 +22,7 @@ Værktøjer:
 ## Læringsmål
 - kan forklare trin i datamodelleringsprocessen, fra konceptuel model til fysisk design
 - Kan designe en datamodel vha. E/R modellering
-- Kan ovesrsætte en konceptuel E/R datamodel til en logisk relationel datamodel med tabeller, kolonner, nøgler, og relationer ml. tabeller  
+- Kan oversætte en konceptuel E/R datamodel til en logisk relationel datamodel med tabeller, kolonner, nøgler, og relationer ml. tabeller  
 
 ## Indhold
 I dette dag arbejder vi med modellering af data, som er et centralt fundament for al backend-udvikling og databasesystemer. Fokus er på sammenhængen mellem virkelighed → model → database.
