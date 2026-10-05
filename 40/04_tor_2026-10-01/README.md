@@ -69,6 +69,8 @@ En JOIN forbinder data, der logisk hører sammen, men er gemt i forskellige tabe
 
 En JOIN er en operation, der sammensætter relaterede rækker fra flere tabeller ved hjælp af en fælles nøgle.
 
+
+
 ### Inner Join
 
 En (INNER) JOIN returnerer kun de rækker, hvor der findes et match i begge tabeller.
@@ -106,7 +108,7 @@ Med en inner join vises kun movies og user ratings hvor der er en match (movie_i
 
 Hvordan vises alle movies, uanset om der er en user rating dvs. en match?
 
----
+
 
 ### OUTER JOIN
 
@@ -161,9 +163,11 @@ ON movie.movie_id = movie_person.movie_id;
 
 ---
 
-[Opgave: Joins kun 1 + 2!](opgave_movie_catalog_joins.pdf)
+[Opgave: Joins kun 1, 2 og 3](opgave_movie_catalog_joins.pdf)
 
 ---
+
+
 
 ## GROUP BY
 
@@ -181,7 +185,7 @@ GROUP BY movie_id;
 
 <img src="assets/group_by_results.png" style="width: 20%; max-width: 400px;">
 
----
+
 
 ## HAVING
 
@@ -221,7 +225,7 @@ Hver column i SELECT skal enten:
 
 [Opgave: GROUP BY, HAVING opgave 1](opgave_movie_catalog_group_by.pdf)
 
----
+
 
 ### Subquery
 

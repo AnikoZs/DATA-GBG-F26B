@@ -16,7 +16,14 @@ Læs om tænke-højt-test [her](https://www.nngroup.com/articles/thinking-aloud-
 
 - at kunne udføre en usability test med tænke-højt-metoden
 
+
+
 ## Aktiviteter
 
 [Opgave 1](opgave_lav_usability_test.md)
 
+
+
+### Opgave 2
+
+Lav en tænke højt test på jeres turist guide. Først planlæg, derefter udfør en test. Find personer i klassen eller på EK (kantine, bibliotek, Codelab etc)

@@ -77,6 +77,8 @@ ROLLBACK;
 ```
 ---
 
+
+
 ### Isolationsniveauer
 
 Når flere brugere arbejder på databasen samtidig, kan deres transactions påvirke hinanden.
@@ -95,12 +97,15 @@ F.eks. en sæde reservationssystem:
 | 5 | Commits transaction | |
 | 6 | | Commits transaction |
 
-
 Resultatet?
+
+
 
 **Lost update**
 
 En reservation foretaget af Customer 1 overskrives af Customer 2s reservation.
+
+
 
 ---
 
@@ -111,12 +116,15 @@ En reservation foretaget af Customer 1 overskrives af Customer 2s reservation.
 | 3 | Cancels booking (rollback) | |
 | 4 | | Makes decision based on B2 booked |
 
-
 Resulatet?
+
+
 
 **Dirty Read**
 
 Customer 2 træffer en beslutning baseret på ikke-committede (“dirty”) reservation af Customer 1 som kan blive rullet tilbage.
+
+
 
 ---
 
@@ -126,12 +134,15 @@ Customer 2 træffer en beslutning baseret på ikke-committede (“dirty”) rese
 | 2 | | Books seat C10 and commits |
 | 3 | Checks seat C10 again | |
 
-
 Resultatet?
+
+
 
 **Non-repeatable read**
 
 Customer 1 ser forskellig tilgængelighed for det samme sæde inden for den samme transaktion.
+
+
 
 ---
 
@@ -146,6 +157,8 @@ Resultatet?
 **Phantom read**
 
 Nye (”fantom”) sæder dukker op under en transaktion.
+
+
 
 ---
 
@@ -316,38 +329,3 @@ Service lag:
 
 
 
-
-
-<!--
-
-
-
-## Learning
-
-
-
-### Lost update scenario
-
-Når to brugere skrive til den samme tabel
-
-
-
-### Dirty read
-
-A user reads a value where a transaction is happening. 
-
-
-
-### Nonrepeatable reads
-
-Two reads of the same data comes back with different results
-
-
-
-### Phantom read
-
-Two reads of the same table returns different rows
-
-
-
--->
