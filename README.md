@@ -514,8 +514,8 @@
 <tr>
   <td></td>
   <td><a href="47/02_tir_2026-11-17/README.md">Tirsdag 17-11-2026</a></td>
-  <td>ITF: PO-møde</td>
-  <td></td>
+  <td>ITF: Projektvejledning</td>
+  <td>DE</td>
   <td></td>
 </tr>
 
@@ -554,7 +554,7 @@
 <tr>
   <td></td>
   <td><a href="48/02_tir_2026-11-24/README.md">Tirsdag 24-11-2026</a></td>
-  <td>ITF- Eksamensprojekt</td>
+  <td>ITF- Projektvejledning</td>
   <td>DE</td>
   <td></td>
 </tr>
@@ -592,7 +592,7 @@
 <tr>
   <td></td>
   <td><a href="49/02_tir_2026-12-01/README.md">Tirsdag 01-12-2026</a></td>
-  <td>ITF:</td>
+  <td>ITF:Projektvejledning</td>
   <td>DE</td>
   <td></td>
 </tr>
@@ -630,7 +630,7 @@
 <tr>
   <td></td>
   <td><a href="50/02_tir_2026-12-08/README.md">Tirsdag 08-12-2026</a></td>
-  <td>ITF: PO-møde</td>
+  <td>ITF: Projektvejledning</td>
   <td>DE</td>
   <td>Online</td>
 </tr>
@@ -670,7 +670,7 @@
 <tr>
   <td></td>
   <td><a href="51/02_tir_2026-12-15/README.md">Tirsdag 15-12-2026</a></td>
-  <td>Eksamensprojekt</td>
+  <td>ITF: Projektvejledning</td>
   <td>DE</td>
   <td>Online</td>
 </tr>
