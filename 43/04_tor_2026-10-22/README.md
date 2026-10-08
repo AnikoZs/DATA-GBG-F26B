@@ -181,8 +181,6 @@ INSERT INTO person (id, name, email) VALUES (2, 'Bob',   'bob@example.com');
 
 
 
-
-
 <!--
 
 ## Learning

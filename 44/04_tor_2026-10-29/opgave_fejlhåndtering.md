@@ -21,7 +21,7 @@ hvilken type exception der bliver kastet og hvor og hvordan den bliver håndtere
 
 |   | Fejl                                          | Hvor kastes exception (hvilket lag) | Exception Type | Hvor og hvordan håndteres den |
 |---|-----------------------------------------------|-------------------------------------|--------------------------------|-------------------------------|
-| 1 | Ugyldige inputdata (fx tomt navn eller email) |                                     |                                |                               |
+| 1 | Ugyldige inputdata (fx tomt navn eller email) |  |                                |                               |
 | 2 | Ugyldigt email format                         |                                     |                                |                               |
 | 3 | Name eller email eksisterer allerede          |                                     |                                |                               |
 | 4 | Profil ikke fundet                            |                                     |                                |                               |
@@ -31,3 +31,5 @@ NB. Fejl nr.4 Profil ikke fundet kan fremtvinges ved at manipulere urlen og skri
 f.eks.localhost:8080/exprofiles/111/edit i browseren.
 
 Fejl nr. 5 "Forkert" url kan fremtvinges ved at skrive f.eks localhost:8080/exprofiles/x
+
+064082

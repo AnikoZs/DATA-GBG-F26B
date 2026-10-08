@@ -13,6 +13,14 @@ Se videoer:
 
 [Understanding concurrency and locks](https://www.linkedin.com/learning/database-foundations-database-management/understanding-concurrency-and-locks?autoplay=true&resume=false&u=36836804)
 
+
+
+## Teacher notes
+
+- [https://chatgpt.com/share/6ac745b4-7fa4-83ed-875c-d755f9f88a79](https://chatgpt.com/share/6ac745b4-7fa4-83ed-875c-d755f9f88a79)
+
+
+
 ## Læringsmål
 
 - At kunne forklare transaktioner og ACID-egenskaberne
@@ -153,6 +161,8 @@ Customer 1 ser forskellig tilgængelighed for det samme sæde inden for den samm
 | 3 | Searches row D again, now sees 5 seats available (phantom seats D4, D5 appeared) | |
 
 Resultatet?
+
+
 
 **Phantom read**
 
