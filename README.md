@@ -459,7 +459,7 @@
   <td><a href="45/05_fre_2026-11-06/README.md">Fredag 06-11-2026</a></td>
   <td>Wishlist - projektvejledning</td>
   <td>JART</td>
-  <td></td>
+  <td>online</td>
 </tr>
 
 <!-- UGE 46 -->
