@@ -469,7 +469,7 @@
   <td><a href="46/01_man_2026-11-09/README.md">Mandag 09-11-2026</a></td>
   <td>Afslutning Wishlist-projekt: Review, Readme og contributing, Wishlist projektvejledning</td>
   <td>ANIZ</td>
-  <td>Online</td>
+  <td></td>
 </tr>
 <tr>
   <td></td>
