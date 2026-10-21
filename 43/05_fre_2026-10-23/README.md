@@ -25,7 +25,20 @@ Mens grupperne fremlægge kigger de øvrige grupper på Static code rubic.docx o
 
 
 ## Tidsplan
-Vi bruger samme tidsplan som til check-in møderne
+
+| Tid   | Gruppe                                           |
+|-------|--------------------------------------------------|
+| 8:30 | Gruppe 11: Iddi, Simon B., Wail, Mustafa, Rawand |
+| 8:50 | Gruppe 10: William, Marcus, Ousman, Osama        |
+| 9:10 | Gruppe 8: Celine, Jenny, Kwan, Nadir             |
+| 9:30 | Gruppe 7: Amanda, Sejr, Dan, Morten              |
+| 9:50 | Gruppe 6: Sveinur, Simon M., August              |
+| 10:10 | Gruppe 5: Demi, Dursun, Yagmur, Hasan            |
+| 10:30 | Gruppe 4: Bushra, Aisha D., Aisha A.             |
+| 10:50 | Gruppe 3: Isak, Villa, Nick V., Patrick          |
+| 11:10 | Gruppe 2: Mathias, Sebastian, Rasmus, Oliver     |
+| 11:30 | Gruppe 1: Jeppe, Valdemar, Nicklas C. Mikkel     |
+| 11:50 | Gruppe T.G.I.F: Katy, Perry                      |
 
 
 ---
