@@ -10,7 +10,7 @@ Formålet med sessionen er, at I får lejlighed til at præsentere et kode-walkt
 Kode-walkthrougen tager udgangspunkt i et end-point efter eget valg, som I skal forklare fra UI til backend.  
 Vi har fokus på kodekvalitet, herunder teknisk gæld, samt tests.
 
-Mens grupperne fremlægge kigger de øvrige grupper på [Static code analysis rubic.docx](Static_code_analysis_rubic.pdf) og gennemgår eget projekt.
+Mens grupperne fremlægge kigger de øvrige grupper på Static code analysis rubic.docx eller Static_code_analysis_rubic.pdf og gennemgår eget projekt.
 
 
 ## Forberedelse
