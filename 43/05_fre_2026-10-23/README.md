@@ -11,7 +11,7 @@ Kode-walkthrougen tager udgangspunkt i et end-point efter eget valg, som I skal 
 Vi har fokus på kodekvalitet, herunder teknisk gæld, samt tests.
 
 Mens grupperne fremlægge kigger de øvrige grupper på Static code analysis rubic.docx eller Static_code_analysis_rubic.pdf og gennemgår eget projekt.
-<object data="Static_code_analysis_rubic.pdf" width="1000" height="1000" type='application/pdf'/>
+
 
 ## Forberedelse
 
