@@ -28,6 +28,8 @@ Se videoer:
 - At kunne bruge isolationsniveauer til at håndtere samtidighed
 - At kunne implementere transaktionsstyring i applikationskode
 
+
+
 ## Indhold
 
 ### Transaction
@@ -49,6 +51,8 @@ Formålet er at sikre, at databasen forbliver konsistent, selv hvis der opstår 
 
 ---
 
+
+
 ### ACID egenskaber
 
 Atomicity: Alt eller intet. Alle operationer gennemføres eller ingen.
@@ -61,6 +65,8 @@ Durability: Når en transaction er committed, går ændringerne ikke tabt, selv 
 
 ---
 
+
+
 #### ```COMMIT```
 
 I MySQL bliver statements som standard automatisk committet. 
@@ -72,6 +78,8 @@ UPDATE account SET balance = balance - 100 WHERE account_id = 1;
 UPDATE account SET balance = balance + 100 WHERE account_id = 2;
 COMMIT;
 ```
+
+
 
 #### ```ROLLBACK```
 

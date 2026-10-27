@@ -437,20 +437,19 @@
   <td></td>
 </tr>
 
-
 <tr>
   <td></td>
-  <td><a href="45/03_ons_2026-11-04/README.md">Onsdag 04-11-2026</a></td>
-  <td>Check-in/vejledning på Wishlist</td>
-  <td>ANIZ</td>
+  <td><a href="45/04_tor_2026-11-05/README.md">Onsdag 04-11-2026</a></td>
+  <td>Usability test</td>
+  <td>BEHU</td>
   <td>Online</td>
 </tr>
 
 <tr>
   <td></td>
-  <td><a href="45/04_tor_2026-11-05/README.md">Torsdag 05-11-2026</a></td>
-  <td>Usability test</td>
-  <td>BEHU</td>
+  <td><a href="45/03_ons_2026-11-04/README.md">Torsdag 05-11-2026</a></td>
+  <td>Check-in/vejledning på Wishlist</td>
+  <td>ANIZ</td>
   <td></td>
 </tr>
 
