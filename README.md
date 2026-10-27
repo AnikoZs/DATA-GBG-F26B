@@ -387,8 +387,8 @@
 
 <tr>
   <td></td>
-  <td><a href="44/02_tir_2026-10-27/README.md">Tirsdag 27-11-2026</a></td>
-  <td>ITF</td>
+  <td><a href="44/02_tir_2026-10-27/README.md">Tirsdag 27-10-2026</a></td>
+  <td>ITF: projektvejledning</td>
   <td>DE</td>
   <td></td>
 </tr>
@@ -458,7 +458,7 @@
   <td><a href="45/05_fre_2026-11-06/README.md">Fredag 06-11-2026</a></td>
   <td>Wishlist - projektvejledning</td>
   <td>JART</td>
-  <td></td>
+  <td>Online</td>
 </tr>
 
 <!-- UGE 46 -->
@@ -468,7 +468,7 @@
   <td><a href="46/01_man_2026-11-09/README.md">Mandag 09-11-2026</a></td>
   <td>Afslutning Wishlist-projekt: Review, Readme og contributing, Wishlist projektvejledning</td>
   <td>ANIZ</td>
-  <td>Online</td>
+  <td></td>
 </tr>
 <tr>
   <td></td>
@@ -513,8 +513,8 @@
 <tr>
   <td></td>
   <td><a href="47/02_tir_2026-11-17/README.md">Tirsdag 17-11-2026</a></td>
-  <td>ITF: PO-møde</td>
-  <td></td>
+  <td>ITF: projektvejledning</td>
+  <td>DE</td>
   <td></td>
 </tr>
 
@@ -553,7 +553,7 @@
 <tr>
   <td></td>
   <td><a href="48/02_tir_2026-11-24/README.md">Tirsdag 24-11-2026</a></td>
-  <td>ITF- Eksamensprojekt</td>
+  <td>ITF: projektvejledning</td>
   <td>DE</td>
   <td></td>
 </tr>
@@ -591,7 +591,7 @@
 <tr>
   <td></td>
   <td><a href="49/02_tir_2026-12-01/README.md">Tirsdag 01-12-2026</a></td>
-  <td>ITF:</td>
+  <td>ITF: projektvejledning</td>
   <td>DE</td>
   <td></td>
 </tr>
@@ -629,7 +629,7 @@
 <tr>
   <td></td>
   <td><a href="50/02_tir_2026-12-08/README.md">Tirsdag 08-12-2026</a></td>
-  <td>ITF: PO-møde</td>
+  <td>ITF: projektvejledning</td>
   <td>DE</td>
   <td>Online</td>
 </tr>
@@ -669,7 +669,7 @@
 <tr>
   <td></td>
   <td><a href="51/02_tir_2026-12-15/README.md">Tirsdag 15-12-2026</a></td>
-  <td>Eksamensprojekt</td>
+  <td>ITF: projektvejledning</td>
   <td>DE</td>
   <td>Online</td>
 </tr>
