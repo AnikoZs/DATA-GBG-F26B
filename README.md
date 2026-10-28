@@ -468,7 +468,7 @@
   <td><a href="46/01_man_2026-11-09/README.md">Mandag 09-11-2026</a></td>
   <td>Afslutning Wishlist-projekt: Review, Readme og contributing, Wishlist projektvejledning</td>
   <td>ANIZ</td>
-  <td></td>
+  <td>Online</td>
 </tr>
 <tr>
   <td></td>
@@ -507,7 +507,7 @@
   <td><a href="47/01_man_2026-11-16/README.md">Mandag 16-11-2026</a></td>
   <td>Præsentation af eksamensprojekt (Sprint 0)</td>
   <td>ANIZ</td>
-  <td></td>
+  <td>FYSISK!</td>
 </tr>
 
 <tr>
