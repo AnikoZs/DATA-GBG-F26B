@@ -426,7 +426,7 @@
   <td>45</td>
 <td><a href="45/01_man_2026-11-02/README.md">Mandag 02-11-2026</a></td>  <td>User interface design</td>
   <td>ANIZ</td>
-  <td></td>
+  <td>Online</td>
 </tr>
 
 <tr>
@@ -450,7 +450,7 @@
   <td><a href="45/03_ons_2026-11-04/README.md">Torsdag 05-11-2026</a></td>
   <td>Check-in/vejledning på Wishlist</td>
   <td>ANIZ</td>
-  <td></td>
+  <td>Online</td>
 </tr>
 
 <tr>
