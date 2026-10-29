@@ -31,5 +31,3 @@ NB. Fejl nr.4 Profil ikke fundet kan fremtvinges ved at manipulere urlen og skri
 f.eks.localhost:8080/exprofiles/111/edit i browseren.
 
 Fejl nr. 5 "Forkert" url kan fremtvinges ved at skrive f.eks localhost:8080/exprofiles/x
-
-064082
