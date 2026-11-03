@@ -8,6 +8,12 @@ Dagens program er at vi gennemgår og diskuterer hvorfor man laver usability tes
 
 [https://www.nngroup.com/articles/ten-usability-heuristics/](https://www.nngroup.com/articles/ten-usability-heuristics/)
 
+
+
+Jeg skal gå fra 9:30 - 10. Så vi tager pause kl 9:45 - 10:00 idag :) 
+
+
+
 ## Forberedelse
 
 Læs om usability testing [her](https://www.nngroup.com/articles/usability-testing-101/)
