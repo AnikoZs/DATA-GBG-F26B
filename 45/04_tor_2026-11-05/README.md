@@ -6,7 +6,7 @@
 
 Dagens program er at vi gennemgår og diskuterer hvorfor man laver usability testing, og hvordan det rent praktisk gøres.   I skal derefter selv prøve at lave en usability test.
 
-
+[https://www.nngroup.com/articles/ten-usability-heuristics/](https://www.nngroup.com/articles/ten-usability-heuristics/)
 
 ## Forberedelse
 
@@ -27,5 +27,4 @@ Læs om tænke-højt-test [her](https://www.nngroup.com/articles/thinking-aloud-
 ## Aktiviteter
 
 [Opgave 1](opgave_lav_usability_test.md)
-
 
