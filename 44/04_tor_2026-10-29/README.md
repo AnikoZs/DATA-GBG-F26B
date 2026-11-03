@@ -23,6 +23,16 @@ Læs: [Handle Exceptions in Spring Boot: A Guide to Clean Code Principles](https
 - @ControllerAdvice, @ExceptionHandler, @ResponseStatus
 - custom error pages
 
+
+
+## Teacher
+
+- Præsentationer om exception handling i jeres Wishlist grupper. 40 minutter
+- 
+- 
+
+
+
 ---
 
 ### Fejlhåndtering i Spring Boot
