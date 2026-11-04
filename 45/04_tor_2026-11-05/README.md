@@ -32,6 +32,14 @@ Læs om tænke-højt-test [her](https://www.nngroup.com/articles/thinking-aloud-
 
 ## Indhold
 
+![UI, brugervenlighed og UX i praksis](assets/UI, brugervenlighed og UX i praksis.png)
+
+*AI genereret*
+
+
+
+
+
 Tænkehøj testen
 
 - Tænk over målgruppen
@@ -49,9 +57,7 @@ https://www.parallelhq.com/blog/five-act-interview-user-tests-design-sprint
 
 
 
-![UI, brugervenlighed og UX i praksis](assets/UI, brugervenlighed og UX i praksis.png)
 
-*AI genereret*
 
 
 
