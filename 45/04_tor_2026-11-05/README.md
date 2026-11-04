@@ -30,6 +30,41 @@ Læs om tænke-højt-test [her](https://www.nngroup.com/articles/thinking-aloud-
 
 
 
+## Indhold
+
+Tænkehøj testen
+
+- Tænk over målgruppen
+- Lav nogle vigtige opgaver testpersonen skal gå igennem
+- Når testen går igang:
+  - Introducer testen og hvordan det kommer til at foregå
+
+
+
+https://www.parallelhq.com/blog/five-act-interview-user-tests-design-sprint
+
+![Fem akter i en brugertest](assets/Fem akter i en brugertest.png)
+
+*AI genereret*
+
+
+
+![UI, brugervenlighed og UX i praksis](assets/UI, brugervenlighed og UX i praksis.png)
+
+*AI genereret*
+
+
+
+![CleanShot-2026-11-04-at-07.48.30](assets/CleanShot-2026-11-04-at-07.48.30.png)
+
+
+
+
+
+
+
+
+
 ## Aktiviteter
 
 [Opgave 1](opgave_lav_usability_test.md)
