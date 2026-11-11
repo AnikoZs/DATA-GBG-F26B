@@ -612,7 +612,7 @@
 <tr>
   <td></td>
   <td><a href="49/05_fre_2026-12-04/README.md">Fredag 04-12-2026</a></td>
-  <td>Eksamensprojekt vejledning</td>
+  <td>Eksamensprojekt vejledning (obligatorisk)</td>
   <td>JART</td>
   <td></td>
 </tr>
