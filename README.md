@@ -612,9 +612,9 @@
 <tr>
   <td></td>
   <td><a href="49/05_fre_2026-12-04/README.md">Fredag 04-12-2026</a></td>
-  <td>Eksamensprojekt statusmøde (obligatorisk, online)</td>
+  <td>Eksamensprojekt statusmøde (obligatorisk)</td>
   <td>JART</td>
-  <td></td>
+  <td>online</td>
 </tr>
 
 <!-- UGE 50 -->
