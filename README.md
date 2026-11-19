@@ -560,7 +560,7 @@
 <tr>
   <td></td>
   <td><a href="48/03_ons_2026-11-25/README.md">Onsdag 25-11-2026</a></td>
-  <td>Eksamensprojekt - statusmøde</td>
+  <td>Eksamensprojekt - statusmøde - hele dagen! Indtil 15:45 taget fra d. 10/12. Online</td>
   <td>BEHU</td>
   <td>Online</td>
 </tr>
@@ -643,8 +643,8 @@
 <tr>
   <td></td>
   <td><a href="50/04_tor_2026-12-10/README.md">Torsdag 10-12-2026</a></td>
-  <td>Eksamensprojekt - statusmøde</td>
-  <td>BEHU</td>
+  <td>Undervisningsgang flyttet til onsdag d. 25/11 eftermiddag</td>
+  <td></td>
   <td></td>
 </tr>
 <tr>
